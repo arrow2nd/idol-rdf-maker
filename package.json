@@ -8,6 +8,7 @@
     "vscode": "^1.66.0"
   },
   "categories": [
+    "Snippets",
     "Other"
   ],
   "activationEvents": [
@@ -22,6 +23,12 @@
       }
     ]
   },
+  "snippets": [
+    {
+      "language": "rdf",
+      "path": "./snippets/snippets.json"
+    }
+  ],
   "scripts": {
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
