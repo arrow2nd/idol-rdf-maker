@@ -1,7 +1,0 @@
-{
-  "Create Clothe": {
-    "prefix": "clothe",
-    "body": "<rdf:Description rdf:about=\"${1}\">\n<schema:name xml:lang=\"ja\">${2}</schema:name>\n<rdfs:label rdf:datatype=\"http://www.w3.org/2001/XMLSchema#string\">${2}</rdfs:label>\n<rdf:type rdf:resource=\"https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes\"/>\n</rdf:Description>",
-    "description": "Create Clothe"
-  }
-}
