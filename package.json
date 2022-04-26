@@ -1,6 +1,6 @@
 {
   "name": "idol-rdf-maker",
-  "displayName": "idol-rdf-maker",
+  "displayName": "Idol RDF Maker",
   "description": "RDF maker for im@sparql",
   "license": "MIT",
   "version": "0.0.1",
@@ -8,27 +8,29 @@
     "vscode": "^1.66.0"
   },
   "categories": [
-    "Snippets",
     "Other"
   ],
   "activationEvents": [
-    "onCommand:idol-rdf-maker.helloWorld"
+    "onCommand:idol-rdf-maker.createClothes"
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "idol-rdf-maker.createClothes",
+          "when": "resourceExtname == .rdf"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "idol-rdf-maker.helloWorld",
-        "title": "Hello World"
+        "command": "idol-rdf-maker.createClothes",
+        "title": "Create Clothes Data (Common Resource Names)",
+        "category": "RDFMaker"
       }
     ]
   },
-  "snippets": [
-    {
-      "language": "rdf",
-      "path": "./snippets/snippets.json"
-    }
-  ],
   "scripts": {
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
@@ -38,7 +40,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "create:idols": "ts-node ./src/tools/create-idols.ts"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
@@ -49,12 +52,14 @@
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "@vscode/test-electron": "^2.1.3",
+    "axios": "^0.27.1",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
     "glob": "^7.2.0",
     "mocha": "^9.2.2",
     "prettier": "^2.6.2",
     "ts-loader": "^9.2.8",
+    "ts-node": "^10.7.0",
     "typescript": "^4.5.5",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"

@@ -1,14 +1,16 @@
 import * as vscode from 'vscode'
 
-export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand(
-    'idol-rdf-maker.helloWorld',
-    () => {
-      vscode.window.showInformationMessage('Hello World from idol-rdf-maker!')
-    }
-  )
+import { createClothes } from './cmd/create-clothes'
 
-  context.subscriptions.push(disposable)
+export function activate(context: vscode.ExtensionContext) {
+  const disposables: vscode.Disposable[] = [
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createClothes',
+      createClothes
+    )
+  ]
+
+  context.subscriptions.push(...disposables)
 }
 
 export function deactivate() {}
