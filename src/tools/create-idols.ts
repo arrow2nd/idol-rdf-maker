@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs'
 import type { QuickPickItem } from 'vscode'
 
-import { convertBrandName } from './libs/convert'
+import { convertBrandName, getUnitName } from './libs/data'
 import { fetchIdolData } from './libs/fetch'
 
 /** SPARQLクエリ (全アイドルを取得) */
@@ -28,12 +28,13 @@ ORDER BY ?nameKana
   const items: QuickPickItem[] = data.map((e): QuickPickItem => {
     const label = e.d.value.match(/detail\/(.+)$/)![1]
     const nameKana = e.nameKana.value.replace(/[・\s]/g, '')
-    const brand = convertBrandName(e.brand.value)
+    const brand = convertBrandName(label, e.brand.value)
+    const unit = getUnitName(label)
 
     return {
       label,
-      description: `${e.name.value} / ${nameKana}`,
-      detail: brand
+      description: `${e.name.value} (${nameKana})`,
+      detail: `${brand}${unit ? ' / ' + unit : ''}`
     }
   })
 
