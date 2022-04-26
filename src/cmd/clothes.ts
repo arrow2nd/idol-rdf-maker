@@ -19,7 +19,7 @@ type CreateClothesType =
   | 'andAnother'
 
 /**
- * 衣装の RDF データに変換
+ * 衣装情報を RDF データに変換
  * @param 衣装情報
  * @returns RDF データ文字列
  */
@@ -78,7 +78,7 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
 }
 
 /**
- * 衣装情報を入力
+ * 衣装情報の入力を受付
  * @returns 衣装情報
  */
 async function inputClothesInfo(): Promise<Clothes | undefined> {
