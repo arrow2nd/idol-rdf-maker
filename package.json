@@ -11,7 +11,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:idol-rdf-maker.createClothes"
+    "onCommand:idol-rdf-maker.createClothes",
+    "onCommand:idol-rdf-maker.createClothesWithDiffResourceNames",
+    "onCommand:idol-rdf-maker.createClothesAndAnother"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -20,6 +22,14 @@
         {
           "command": "idol-rdf-maker.createClothes",
           "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createClothesWithDiffResourceNames",
+          "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createClothesAndAnother",
+          "when": "resourceExtname == .rdf"
         }
       ]
     },
@@ -27,6 +37,16 @@
       {
         "command": "idol-rdf-maker.createClothes",
         "title": "Create Clothes Data (Common Resource Names)",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createClothesWithDiffResourceNames",
+        "title": "Create Clothes Data (Different Resource Names)",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createClothesAndAnother",
+        "title": "Create Clothes Data (Normal & Another Clothes)",
         "category": "RDFMaker"
       }
     ]
