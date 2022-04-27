@@ -84,13 +84,9 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
  * @param editor TextEditor
  */
 export async function createUnitData(editor: vscode.TextEditor) {
-  // 衣装情報
   const unitInfo = await inputUnitInfo()
   if (!unitInfo) return
 
-  // RDFデータを作成
   const rdf = convert2unitRDF(unitInfo)
-
-  // エディタに挿入
   await insertEditor(editor, rdf)
 }

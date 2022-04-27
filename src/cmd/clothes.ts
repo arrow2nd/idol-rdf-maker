@@ -1,7 +1,6 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { showResourceNameInputBox } from '../libs/input'
 import { showQuickPickIdols } from '../libs/pick'
 
 /** 衣装情報 */
@@ -76,7 +75,9 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
  */
 async function inputClothesInfo(): Promise<Clothes | undefined> {
   // リソース名
-  const resource = await showResourceNameInputBox()
+  const resource = await vscode.window.showInputBox({
+    title: 'リソース名を入力 (rdf:Description)'
+  })
   if (typeof resource === 'undefined') return
 
   // 衣装名
@@ -112,13 +113,9 @@ export async function createClothesData(
   editor: vscode.TextEditor,
   type: CreateClothesType
 ) {
-  // 衣装情報
   const clothesInfo = await inputClothesInfo()
   if (!clothesInfo) return
 
-  // RDFデータを作成
   const rdf = createClothesRDF(clothesInfo, type)
-
-  // エディタに挿入
   await insertEditor(editor, rdf)
 }
