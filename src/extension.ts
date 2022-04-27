@@ -1,9 +1,11 @@
 import * as vscode from 'vscode'
 
 import { createClothesData } from './cmd/clothes'
+import { createMemberData } from './cmd/member'
 
 export function activate(context: vscode.ExtensionContext) {
   const disposables: vscode.Disposable[] = [
+    // clothes
     vscode.commands.registerTextEditorCommand(
       'idol-rdf-maker.createClothes',
       (textEditor) => createClothesData(textEditor, 'commonResourceNames')
@@ -15,6 +17,15 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerTextEditorCommand(
       'idol-rdf-maker.createClothesAndAnother',
       (textEditor) => createClothesData(textEditor, 'andAnother')
+    ),
+    // member
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createImasWhose',
+      (textEditor) => createMemberData(textEditor, 'imas:Whose')
+    ),
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createSchemaMember',
+      (textEditor) => createMemberData(textEditor, 'schema:member')
     )
   ]
 
