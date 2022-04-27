@@ -46,27 +46,27 @@
     "commands": [
       {
         "command": "idol-rdf-maker.createClothes",
-        "title": "Create Clothes Data (Common Resource Names)",
+        "title": "%createClothes.title%",
         "category": "RDFMaker"
       },
       {
         "command": "idol-rdf-maker.createClothesForEachIdol",
-        "title": "Create Clothes Data (Different Resource Names)",
+        "title": "%createClothesForEachIdol.title%",
         "category": "RDFMaker"
       },
       {
         "command": "idol-rdf-maker.createClothesNormalAndAnother",
-        "title": "Create Clothes Data ()",
+        "title": "%createClothesNormalAndAnother.title%",
         "category": "RDFMaker"
       },
       {
         "command": "idol-rdf-maker.createImasWhose",
-        "title": "Create imas:whose",
+        "title": "%createImasWhose.title%",
         "category": "RDFMaker"
       },
       {
         "command": "idol-rdf-maker.createSchemaMember",
-        "title": "Create schema:member",
+        "title": "%createSchemaMember.title%",
         "category": "RDFMaker"
       }
     ]

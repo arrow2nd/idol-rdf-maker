@@ -1,0 +1,7 @@
+{
+  "createClothes.title": "衣装データを作成",
+  "createClothesForEachIdol.title": "衣装データを作成 (リソース名末尾にアイドル名を含む)",
+  "createClothesNormalAndAnother.title": "衣装データを作成 (通常衣装 + アナザー衣装)",
+  "createImasWhose.title": "imas:whose 語彙を作成",
+  "createSchemaMember.title": "schema:member 語彙を作成"
+}
