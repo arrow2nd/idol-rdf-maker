@@ -3,5 +3,6 @@
   "createClothesForEachIdol.title": "Create Clothes Data (For Each Idols)",
   "createClothesNormalAndAnother.title": "Create Clothes Data (Normal Clothes + Another Clothes)",
   "createImasWhose.title": "Create imas:whose",
-  "createSchemaMember.title": "Create schema:member"
+  "createSchemaMember.title": "Create schema:member",
+  "createUnit.title": "Create Unit Data"
 }
