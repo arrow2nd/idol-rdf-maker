@@ -8,15 +8,15 @@ export function activate(context: vscode.ExtensionContext) {
     // clothes
     vscode.commands.registerTextEditorCommand(
       'idol-rdf-maker.createClothes',
-      (textEditor) => createClothesData(textEditor, 'commonResourceNames')
+      (textEditor) => createClothesData(textEditor, 'default')
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createClothesWithDiffResourceNames',
-      (textEditor) => createClothesData(textEditor, 'diffResourceNames')
+      'idol-rdf-maker.createClothesForEachIdol',
+      (textEditor) => createClothesData(textEditor, 'forEachIdol')
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createClothesAndAnother',
-      (textEditor) => createClothesData(textEditor, 'andAnother')
+      'idol-rdf-maker.createClothesNormalAndAnother',
+      (textEditor) => createClothesData(textEditor, 'normalAndAnother')
     ),
     // member
     vscode.commands.registerTextEditorCommand(

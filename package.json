@@ -12,8 +12,8 @@
   ],
   "activationEvents": [
     "onCommand:idol-rdf-maker.createClothes",
-    "onCommand:idol-rdf-maker.createClothesWithDiffResourceNames",
-    "onCommand:idol-rdf-maker.createClothesAndAnother",
+    "onCommand:idol-rdf-maker.createClothesForEachIdol",
+    "onCommand:idol-rdf-maker.createClothesNormalAndAnother",
     "onCommand:idol-rdf-maker.createImasWhose",
     "onCommand:idol-rdf-maker.createSchemaMember"
   ],
@@ -26,11 +26,11 @@
           "when": "resourceExtname == .rdf"
         },
         {
-          "command": "idol-rdf-maker.createClothesWithDiffResourceNames",
+          "command": "idol-rdf-maker.createClothesForEachIdol",
           "when": "resourceExtname == .rdf"
         },
         {
-          "command": "idol-rdf-maker.createClothesAndAnother",
+          "command": "idol-rdf-maker.createClothesNormalAndAnother",
           "when": "resourceExtname == .rdf"
         },
         {
@@ -46,17 +46,17 @@
     "commands": [
       {
         "command": "idol-rdf-maker.createClothes",
-        "title": "Create Clothes Data ( Common Resource Names )",
+        "title": "Create Clothes Data (Common Resource Names)",
         "category": "RDFMaker"
       },
       {
-        "command": "idol-rdf-maker.createClothesWithDiffResourceNames",
-        "title": "Create Clothes Data ( Different Resource Names )",
+        "command": "idol-rdf-maker.createClothesForEachIdol",
+        "title": "Create Clothes Data (Different Resource Names)",
         "category": "RDFMaker"
       },
       {
-        "command": "idol-rdf-maker.createClothesAndAnother",
-        "title": "Create Clothes Data ( Normal & Another Clothes )",
+        "command": "idol-rdf-maker.createClothesNormalAndAnother",
+        "title": "Create Clothes Data ()",
         "category": "RDFMaker"
       },
       {

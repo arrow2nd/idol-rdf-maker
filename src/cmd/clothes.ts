@@ -12,16 +12,13 @@ type Clothes = {
   idols: string[]
 }
 
-/** 作成する衣装データのタイプ */
-type CreateClothesType =
-  | 'commonResourceNames'
-  | 'diffResourceNames'
-  | 'andAnother'
+/** 作成する衣装データの種類 */
+type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
 
 /**
  * 衣装情報を RDF データに変換
  * @param 衣装情報
- * @returns RDF データ文字列
+ * @returns RDFデータ
  */
 const convert2ClothesRDF = ({
   resource,
@@ -39,13 +36,13 @@ const convert2ClothesRDF = ({
 /**
  * 衣装の RDF データを作成
  * @param clothes 衣装情報
- * @param type 作成する衣装データのタイプ
- * @returns RDF データ文字列
+ * @param type 作成する衣装データの種類
+ * @returns RDFデータ
  */
 function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
   switch (type) {
-    // アイドル毎にリソース名が異なる
-    case 'diffResourceNames': {
+    // アイドル毎に衣装データを作成
+    case 'forEachIdol':
       return clothes.idols
         .map((idol) =>
           convert2ClothesRDF({
@@ -55,10 +52,9 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
           })
         )
         .join('\n')
-    }
 
-    // アナザー衣装が存在する
-    case 'andAnother': {
+    // アナザー衣装も合わせて作成 (TheaterDays)
+    case 'normalAndAnother':
       return [
         convert2ClothesRDF(clothes),
         convert2ClothesRDF({
@@ -68,12 +64,9 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
           desc: `「${clothes.name}」のアナザー衣装です。`
         })
       ].join('\n')
-    }
 
-    // 一般的な衣装データ
-    default: {
+    default:
       return convert2ClothesRDF(clothes)
-    }
   }
 }
 
@@ -113,7 +106,7 @@ async function inputClothesInfo(): Promise<Clothes | undefined> {
 /**
  * 衣装データを作成
  * @param editor TextEditor
- * @param type 作成する衣装データのタイプ
+ * @param type 作成する衣装データの種類
  */
 export async function createClothesData(
   editor: vscode.TextEditor,
