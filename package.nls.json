@@ -5,5 +5,6 @@
   "createImasWhose.title": "Create imas:whose",
   "createSchemaMember.title": "Create schema:member",
   "createUnit.title": "Create Unit Data",
-  "createLive.title": "Create Live Data"
+  "createLive.title": "Create Live Data",
+  "createRanking.title": "Create Cinderella Ranking Data"
 }

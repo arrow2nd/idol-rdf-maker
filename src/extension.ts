@@ -3,6 +3,7 @@ import * as vscode from 'vscode'
 import { createClothesData } from './cmd/clothes'
 import { createLiveData } from './cmd/live'
 import { createMemberData } from './cmd/member'
+import { createRankingData } from './cmd/ranking'
 import { createUnitData } from './cmd/unit'
 
 export function activate(context: vscode.ExtensionContext) {
@@ -29,6 +30,11 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerTextEditorCommand(
       'idol-rdf-maker.createLive',
       (textEditor) => createLiveData(textEditor)
+    ),
+    // ranking
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createRanking',
+      (textEditor) => createRankingData(textEditor)
     ),
     // member
     vscode.commands.registerTextEditorCommand(
