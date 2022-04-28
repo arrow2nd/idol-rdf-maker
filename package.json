@@ -16,7 +16,8 @@
     "onCommand:idol-rdf-maker.createClothesNormalAndAnother",
     "onCommand:idol-rdf-maker.createImasWhose",
     "onCommand:idol-rdf-maker.createSchemaMember",
-    "onCommand:idol-rdf-maker.createUnit"
+    "onCommand:idol-rdf-maker.createUnit",
+    "onCommand:idol-rdf-maker.createLive"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -44,6 +45,10 @@
         },
         {
           "command": "idol-rdf-maker.createUnit",
+          "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createLive",
           "when": "resourceExtname == .rdf"
         }
       ]
@@ -77,6 +82,11 @@
       {
         "command": "idol-rdf-maker.createUnit",
         "title": "%createUnit.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createLive",
+        "title": "%createLive.title%",
         "category": "RDFMaker"
       }
     ]
