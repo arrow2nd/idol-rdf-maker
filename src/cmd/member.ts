@@ -1,7 +1,8 @@
 import * as vscode from 'vscode'
 
+import { idolQuickPickItems } from '../data/idols'
 import { insertEditor } from '../libs/editor'
-import { showQuickPickData } from '../libs/input'
+import { commonQuickPickOptions } from '../libs/input'
 
 /** 語彙の種類 */
 type CreateMemberType = 'imas:Whose' | 'schema:member'
@@ -16,11 +17,15 @@ export async function createMemberData(
   editor: vscode.TextEditor,
   type: CreateMemberType
 ) {
-  const idols = await showQuickPickData('アイドル')
+  const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
+    ...commonQuickPickOptions,
+    title: `アイドルを選択 (${type})`,
+    canPickMany: true
+  })
   if (!idols) return
 
   const rdfs = idols
-    .map((idol) => `<${type} rdf:resource="${idol}"/>`)
+    .map(({ label }) => `<${type} rdf:resource="${label}"/>`)
     .join('\n')
 
   await insertEditor(editor, rdfs)

@@ -1,9 +1,11 @@
 import * as vscode from 'vscode'
 
+import { castQuickPickItems } from '../data/casts'
 import { liveTypeQuickPickItems } from '../data/live'
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showInputBox, showQuickPickData } from '../libs/input'
+import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
+import { validateDate, validateURL } from '../libs/validate'
 
 /** ライブ情報 */
 type Live = {
@@ -69,18 +71,14 @@ async function inputLiveInfo(): Promise<Live | undefined> {
   // 日時
   const date = await showInputBox({
     title: '開催日時を入力 (schema:startDate / schema:endDate)',
-    validateInput: (value) =>
-      /^\d{4}-\d{2}-\d{2}$/.test(value)
-        ? undefined
-        : 'YYYY-MM-DDの形式で入力してください'
+    validateInput: validateDate
   })
   if (typeof date === 'undefined') return
 
   // URL
   const url = await showInputBox({
     title: '特設ページのURLを入力 (schema:url)',
-    validateInput: (value) =>
-      /^https?:\/\//.test(value) ? undefined : '有効なURL形式ではありません'
+    validateInput: validateURL
   })
   if (typeof url === 'undefined') return
 
@@ -92,7 +90,11 @@ async function inputLiveInfo(): Promise<Live | undefined> {
     liveType?.label === 'none' ? undefined : liveType?.label
 
   // 出演者
-  const actors = await showQuickPickData('声優', '出演者を選択')
+  const actors = await vscode.window.showQuickPick(castQuickPickItems, {
+    ...commonQuickPickOptions,
+    title: '出演者を選択 (schema:actor)',
+    canPickMany: true
+  })
   if (typeof actors === 'undefined') return
 
   return {
@@ -100,7 +102,7 @@ async function inputLiveInfo(): Promise<Live | undefined> {
     location,
     date,
     url,
-    actors,
+    actors: getLabels(actors),
     attendanceMode
   }
 }

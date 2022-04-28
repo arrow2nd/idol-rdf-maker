@@ -1,15 +1,5 @@
 import * as vscode from 'vscode'
 
-import { castQuickPickItems } from '../data/casts'
-import { idolQuickPickItems } from '../data/idols'
-
-/** QuickPick の共通設定 */
-export const commonQuickPickOptions: vscode.QuickPickOptions = {
-  matchOnDescription: true,
-  matchOnDetail: true,
-  ignoreFocusOut: true
-}
-
 /**
  * InputBox を表示
  * @param options オプション
@@ -24,26 +14,18 @@ export function showInputBox(
   })
 }
 
-/** QuickPick で表示するデータの種類 */
-type QuickPickDataType = 'アイドル' | '声優'
+/** QuickPick の共通設定 */
+export const commonQuickPickOptions: vscode.QuickPickOptions = {
+  matchOnDescription: true,
+  matchOnDetail: true,
+  ignoreFocusOut: true
+}
 
 /**
- * 指定したデータの QuickPick を表示
- * @param type 表示するデータの種類
- * @param title タイトル
- * @returns アイドルのリソース名 (配列)
+ * ラベル文字列を取得
+ * @param items 選択要素
+ * @returns ラベル文字列の配列
  */
-export async function showQuickPickData(
-  type: QuickPickDataType,
-  title?: string
-): Promise<string[] | undefined> {
-  const items = type === '声優' ? castQuickPickItems : idolQuickPickItems
-
-  const results = await vscode.window.showQuickPick(items, {
-    title: title || `${type}を選択`,
-    ...commonQuickPickOptions,
-    canPickMany: true
-  })
-
-  return results?.map(({ label }) => label)
+export function getLabels(items: vscode.QuickPickItem[]): string[] {
+  return items.map(({ label }) => label)
 }

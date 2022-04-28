@@ -1,8 +1,9 @@
 import * as vscode from 'vscode'
 
+import { idolQuickPickItems } from '../data/idols'
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showInputBox, showQuickPickData } from '../libs/input'
+import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
 
 /** ユニット情報 */
 type Unit = {
@@ -18,7 +19,7 @@ type Unit = {
  * @param unit ユニット情報
  * @returns RDF データ
  */
-function convert2unitRDF(unit: Unit) {
+function convert2UnitRDF(unit: Unit) {
   const { nameKana, idols, color } = unit
 
   const resouce = encodeURIComponent(unit.name)
@@ -70,7 +71,11 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
   if (typeof desc === 'undefined') return
 
   // アイドルを選択
-  const idols = await showQuickPickData('アイドル')
+  const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
+    ...commonQuickPickOptions,
+    title: '所属アイドルを選択 (schema:member)',
+    canPickMany: true
+  })
   if (typeof idols === 'undefined') return
 
   return {
@@ -78,7 +83,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
     nameKana,
     color: color.toUpperCase(),
     desc,
-    idols
+    idols: getLabels(idols)
   }
 }
 
@@ -90,7 +95,7 @@ export async function createUnitData(editor: vscode.TextEditor) {
   const unitInfo = await inputUnitInfo()
   if (!unitInfo) return
 
-  const rdf = convert2unitRDF(unitInfo)
+  const rdf = convert2UnitRDF(unitInfo)
 
   await insertEditor(editor, rdf)
 }
