@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showQuickPickIdols } from '../libs/pick'
+import { showInputBox, showQuickPickIdols } from '../libs/input'
 
 /** ユニット情報 */
 type Unit = {
@@ -42,19 +42,19 @@ function convert2unitRDF(unit: Unit) {
  */
 async function inputUnitInfo(): Promise<Unit | undefined> {
   // ユニット名
-  const name = await vscode.window.showInputBox({
+  const name = await showInputBox({
     title: 'ユニット名を入力 (rdf:Description / schema:name / rdfs:label)'
   })
   if (typeof name === 'undefined') return
 
   // 読み仮名
-  const nameKana = await vscode.window.showInputBox({
+  const nameKana = await showInputBox({
     title: '読み仮名を入力 (imas:nameKana)'
   })
   if (typeof nameKana === 'undefined') return
 
   // カラーコード
-  const color = await vscode.window.showInputBox({
+  const color = await showInputBox({
     title: 'イメージカラーのカラーコード (imas:Color)',
     validateInput: (value) =>
       value === '' || /^[A-Fa-f0-9]{6}$/.test(value)
@@ -64,7 +64,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
   if (typeof color === 'undefined') return
 
   // 衣装説明
-  const desc = await vscode.window.showInputBox({
+  const desc = await showInputBox({
     title: '衣装説明を入力 (schema:description)'
   })
   if (typeof desc === 'undefined') return

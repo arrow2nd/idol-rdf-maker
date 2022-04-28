@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showQuickPickIdols } from '../libs/pick'
+import { showInputBox, showQuickPickIdols } from '../libs/input'
 
 /** 衣装情報 */
 type Clothes = {
@@ -79,19 +79,19 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
  */
 async function inputClothesInfo(): Promise<Clothes | undefined> {
   // リソース名
-  const resource = await vscode.window.showInputBox({
+  const resource = await showInputBox({
     title: 'リソース名を入力 (rdf:Description)'
   })
   if (typeof resource === 'undefined') return
 
   // 衣装名
-  const name = await vscode.window.showInputBox({
+  const name = await showInputBox({
     title: '衣装名を入力 (schema:name)'
   })
   if (typeof name === 'undefined') return
 
   // 衣装説明
-  const desc = await vscode.window.showInputBox({
+  const desc = await showInputBox({
     title: '衣装説明を入力 (schema:description)'
   })
   if (typeof desc === 'undefined') return

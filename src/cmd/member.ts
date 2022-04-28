@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { showQuickPickIdols } from '../libs/pick'
+import { showQuickPickIdols } from '../libs/input'
 
 /** 語彙の種類 */
 type CreateMemberType = 'imas:Whose' | 'schema:member'
