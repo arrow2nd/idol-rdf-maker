@@ -15,21 +15,23 @@ type Unit = {
 
 /**
  * 衣装情報を RDF データに変換
- * @param ユニット情報
+ * @param unit ユニット情報
  * @returns RDFデータ
  */
-function convert2unitRDF({ name, nameKana, color, desc, idols }: Unit) {
-  const resouceName = encodeURIComponent(name)
-  const unitName = escapeHTML(name)
-  const unitDesc = escapeHTML(desc)
+function convert2unitRDF(unit: Unit) {
+  const { nameKana, idols, color } = unit
 
-  return `<rdf:Description rdf:about="${resouceName}">
-  <schema:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${unitName}</schema:name>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${unitName}</rdfs:label>
+  const resouce = encodeURIComponent(unit.name)
+  const name = escapeHTML(unit.name)
+  const desc = escapeHTML(unit.desc)
+
+  return `<rdf:Description rdf:about="${resouce}">
+  <schema:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</schema:name>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</rdfs:label>
   <imas:nameKana xml:lang="ja">${nameKana}</imas:nameKana>
   ${idols.map((idol) => `<schema:member rdf:resource="${idol}"/>`).join('\n  ')}
   <imas:Color rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">${color}</imas:Color>
-  <schema:description xml:lang="ja">${unitDesc}</schema:description>
+  <schema:description xml:lang="ja">${desc}</schema:description>
   <rdf:type rdf:resource="https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit"/>
 </rdf:Description>`
 }
