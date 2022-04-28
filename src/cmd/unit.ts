@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showInputBox, showQuickPickIdols } from '../libs/input'
+import { showInputBox, showQuickPickData } from '../libs/input'
 
 /** ユニット情報 */
 type Unit = {
@@ -70,7 +70,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
   if (typeof desc === 'undefined') return
 
   // アイドルを選択
-  const idols = await showQuickPickIdols()
+  const idols = await showQuickPickData('アイドル')
   if (typeof idols === 'undefined') return
 
   return {

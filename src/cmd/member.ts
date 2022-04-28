@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { showQuickPickIdols } from '../libs/input'
+import { showQuickPickData } from '../libs/input'
 
 /** 語彙の種類 */
 type CreateMemberType = 'imas:Whose' | 'schema:member'
@@ -16,7 +16,7 @@ export async function createMemberData(
   editor: vscode.TextEditor,
   type: CreateMemberType
 ) {
-  const idols = await showQuickPickIdols()
+  const idols = await showQuickPickData('アイドル')
   if (!idols) return
 
   const rdfs = idols

@@ -2,7 +2,7 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { showInputBox, showQuickPickIdols } from '../libs/input'
+import { showInputBox, showQuickPickData } from '../libs/input'
 
 /** 衣装情報 */
 type Clothes = {
@@ -97,7 +97,7 @@ async function inputClothesInfo(): Promise<Clothes | undefined> {
   if (typeof desc === 'undefined') return
 
   // アイドルを選択
-  const idols = await showQuickPickIdols()
+  const idols = await showQuickPickData('アイドル')
   if (typeof idols === 'undefined') return
 
   return {
