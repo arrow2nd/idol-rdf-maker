@@ -1,6 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
+import { escapeHTML } from '../libs/escape'
 import { showQuickPickIdols } from '../libs/pick'
 
 /** 衣装情報 */
@@ -19,18 +20,19 @@ type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
  * @param 衣装情報
  * @returns RDFデータ
  */
-const convert2ClothesRDF = ({
-  resource,
-  name,
-  desc,
-  idols
-}: Clothes): string => `<rdf:Description rdf:about="${resource}">
-  <schema:name xml:lang="ja">${name}</schema:name>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</rdfs:label>
-  <schema:description xml:lang="ja">${desc}</schema:description>
+function convert2ClothesRDF({ resource, name, desc, idols }: Clothes): string {
+  const resourceName = encodeURIComponent(resource)
+  const clothesName = escapeHTML(name)
+  const clothesDesc = escapeHTML(desc)
+
+  return `<rdf:Description rdf:about="${resourceName}">
+  <schema:name xml:lang="ja">${clothesName}</schema:name>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${clothesName}</rdfs:label>
+  <schema:description xml:lang="ja">${clothesDesc}</schema:description>
   ${idols.map((e) => `<imas:Whose rdf:resource="${e}"/>`).join('\n  ')}
   <rdf:type rdf:resource="https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes"/>
 </rdf:Description>`
+}
 
 /**
  * 衣装の RDF データを作成
@@ -117,5 +119,6 @@ export async function createClothesData(
   if (!clothesInfo) return
 
   const rdf = createClothesRDF(clothesInfo, type)
+
   await insertEditor(editor, rdf)
 }
