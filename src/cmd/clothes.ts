@@ -18,7 +18,7 @@ type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
 /**
  * 衣装情報を RDF データに変換
  * @param clothes 衣装情報
- * @returns RDFデータ
+ * @returns RDF データ
  */
 function convert2ClothesRDF(clothes: Clothes): string {
   const { idols } = clothes
@@ -40,7 +40,7 @@ function convert2ClothesRDF(clothes: Clothes): string {
  * 衣装の RDF データを作成
  * @param clothes 衣装情報
  * @param type 作成する衣装データの種類
- * @returns RDFデータ
+ * @returns RDF データ
  */
 function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
   switch (type) {

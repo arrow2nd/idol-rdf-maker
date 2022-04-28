@@ -16,7 +16,7 @@ type Unit = {
 /**
  * 衣装情報を RDF データに変換
  * @param unit ユニット情報
- * @returns RDFデータ
+ * @returns RDF データ
  */
 function convert2unitRDF(unit: Unit) {
   const { nameKana, idols, color } = unit

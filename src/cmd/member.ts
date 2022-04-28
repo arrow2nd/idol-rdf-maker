@@ -10,7 +10,7 @@ type CreateMemberType = 'imas:Whose' | 'schema:member'
  * imas:Whose / schema:member を作成
  * @param editor TextEditor
  * @param type 作成する語彙の種類
- * @returns RDFデータ
+ * @returns RDF データ
  */
 export async function createMemberData(
   editor: vscode.TextEditor,
