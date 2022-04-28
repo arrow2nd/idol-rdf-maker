@@ -29,9 +29,9 @@ function convert2LiveRDF(live: Live): string {
   const title = escapeHTML(live.title)
   const location = escapeHTML(live.location)
 
-  const attendanceMode = live.attendanceMode
-    ? `\n  <schema:eventAttendanceMode rdf:resource="http://schema.org/${live.attendanceMode}" />`
-    : ''
+  const attendanceMode =
+    live.attendanceMode &&
+    `\n  <schema:eventAttendanceMode rdf:resource="http://schema.org/${live.attendanceMode}" />`
 
   const schemaActors = actors
     .map((e) => `<schema:actor xml:lang="ja">${e}</schema:actor>`)
