@@ -1,8 +1,10 @@
 import * as vscode from 'vscode'
 
-import { idolQuickPickItems } from '../data/idols'
 import { insertEditor } from '../libs/editor'
 import { commonQuickPickOptions } from '../libs/input'
+import { buildXML } from '../libs/xml'
+
+import { idolQuickPickItems } from '../data/idols'
 
 /** 語彙の種類 */
 type CreateMemberType = 'imas:Whose' | 'schema:member'
@@ -24,9 +26,9 @@ export async function createMemberData(
   })
   if (!idols) return
 
-  const rdfs = idols
-    .map(({ label }) => `<${type} rdf:resource="${label}"/>`)
-    .join('\n')
+  const idolsData = {
+    [type]: idols.map(({ label }) => ({ '@_rdf:resource': label }))
+  }
 
-  await insertEditor(editor, rdfs)
+  await insertEditor(editor, buildXML(idolsData))
 }

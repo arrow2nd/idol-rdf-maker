@@ -1,9 +1,11 @@
 import * as vscode from 'vscode'
 
-import { idolQuickPickItems } from '../data/idols'
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
 import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
+import { buildXML } from '../libs/xml'
+
+import { idolQuickPickItems } from '../data/idols'
 
 /** 衣装情報 */
 type Clothes = {
@@ -17,24 +19,37 @@ type Clothes = {
 type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
 
 /**
- * 衣装情報を RDF データに変換
+ * 衣装情報の XML オブジェクトを作成
  * @param clothes 衣装情報
- * @returns RDF データ
+ * @returns XML オブジェクト
  */
-function convert2ClothesRDF(clothes: Clothes): string {
+function createClothesXMLObject(clothes: Clothes): any {
   const { idols } = clothes
 
   const resource = encodeURIComponent(clothes.resource)
   const name = escapeHTML(clothes.name)
   const desc = escapeHTML(clothes.desc)
 
-  return `<rdf:Description rdf:about="${resource}">
-  <schema:name xml:lang="ja">${name}</schema:name>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</rdfs:label>
-  <schema:description xml:lang="ja">${desc}</schema:description>
-  ${idols.map((e) => `<imas:Whose rdf:resource="${e}"/>`).join('\n  ')}
-  <rdf:type rdf:resource="https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes"/>
-</rdf:Description>`
+  return {
+    '@_rdf:about': resource,
+    'schema:name': {
+      '@_xml:lang': 'ja',
+      '#text': name
+    },
+    'rdfs:label': {
+      '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
+      '#text': name
+    },
+    'schema:description': {
+      '@_xml:lang': 'ja',
+      '#text': desc
+    },
+    'imas:Whose': idols.map((e) => ({ '@_rdf:resource': e })),
+    'rdf:type': {
+      '@_rdf:resource':
+        'https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes'
+    }
+  }
 }
 
 /**
@@ -44,34 +59,40 @@ function convert2ClothesRDF(clothes: Clothes): string {
  * @returns RDF データ
  */
 function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
+  let clothesData = []
+
   switch (type) {
     // アイドル毎に衣装データを作成
     case 'forEachIdol':
-      return clothes.idols
-        .map((idol) =>
-          convert2ClothesRDF({
-            ...clothes,
-            resource: `${clothes.resource}_${idol.replace(/_/g, '')}`,
-            idols: [idol]
-          })
-        )
-        .join('\n')
+      clothesData = clothes.idols.map((idol) =>
+        createClothesXMLObject({
+          ...clothes,
+          resource: `${clothes.resource}_${idol.replace(/_/g, '')}`,
+          idols: [idol]
+        })
+      )
+      break
 
     // アナザー衣装も合わせて作成 (TheaterDays)
     case 'normalAndAnother':
-      return [
-        convert2ClothesRDF(clothes),
-        convert2ClothesRDF({
+      clothesData = [
+        createClothesXMLObject(clothes),
+        createClothesXMLObject({
           ...clothes,
           resource: clothes.resource + '%2B',
           name: clothes.name + '+',
           desc: `「${clothes.name}」のアナザー衣装です。`
         })
-      ].join('\n')
+      ]
+      break
 
     default:
-      return convert2ClothesRDF(clothes)
+      clothesData = [createClothesXMLObject(clothes)]
   }
+
+  return buildXML({
+    'rdf:Description': clothesData
+  })
 }
 
 /**

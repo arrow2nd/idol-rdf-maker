@@ -1,11 +1,13 @@
 import * as vscode from 'vscode'
 
-import { castQuickPickItems } from '../data/casts'
-import { liveTypeQuickPickItems } from '../data/live'
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
 import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
 import { validateDate, validateURL } from '../libs/validate'
+import { buildXML } from '../libs/xml'
+
+import { castQuickPickItems } from '../data/casts'
+import { liveTypeQuickPickItems } from '../data/live'
 
 /** ライブ情報 */
 type Live = {
@@ -18,36 +20,58 @@ type Live = {
 }
 
 /**
- * ライブ情報を RDF データに変換
+ * ライブ情報の RDF データを作成
  * @param live ライブ情報
  * @returns RDF データ
  */
-function convert2LiveRDF(live: Live): string {
+function createLiveRDF(live: Live): string {
   const { date, url, actors } = live
 
   const resource = encodeURIComponent(live.title)
   const title = escapeHTML(live.title)
   const location = escapeHTML(live.location)
 
-  const attendanceMode =
-    live.attendanceMode &&
-    `\n  <schema:eventAttendanceMode rdf:resource="http://schema.org/${live.attendanceMode}" />`
+  const attendanceMode = live.attendanceMode && {
+    'schema:eventAttendanceMode': {
+      '@_rdf:resource': `http://schema.org/${live.attendanceMode}`
+    }
+  }
 
-  const schemaActors = actors
-    .map((e) => `<schema:actor xml:lang="ja">${e}</schema:actor>`)
-    .join('\n  ')
+  const liveData = {
+    'rdf:Description': {
+      '@_rdf:about': resource,
+      'schema:actor': actors.map((e) => ({ '@_xml:lang': 'ja', '#text': e })),
+      'schema:eventStatus': {
+        '@_rdf:resource': 'http://schema.org/EventScheduled'
+      },
+      ...attendanceMode,
+      'schema:name': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
+        '#text': title
+      },
+      'schema:location': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
+        '#text': location
+      },
+      'schema:startDate': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#date',
+        '#text': date
+      },
+      'schema:endDate': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#date',
+        '#text': date
+      },
+      'schema:url': {
+        '@_rdf:resource': url
+      },
+      'rdf:type': {
+        '@_rdf:resource':
+          'https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Live'
+      }
+    }
+  }
 
-  return `<rdf:Description rdf:about="${resource}">
-  ${schemaActors}
-  <schema:eventStatus rdf:resource="http://schema.org/EventScheduled" />${attendanceMode}
-  <schema:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${title}</schema:name>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${title}</rdfs:label>
-  <schema:location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${location}</schema:location>
-  <schema:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">${date}</schema:startDate>
-  <schema:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">${date}</schema:endDate>
-  <schema:url rdf:resource="${url}"/>
-  <rdf:type rdf:resource="https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Live"/>
-</rdf:Description>`
+  return buildXML(liveData)
 }
 
 /**
@@ -83,11 +107,10 @@ async function inputLiveInfo(): Promise<Live | undefined> {
   if (typeof url === 'undefined') return
 
   // 開催形式
-  const liveType = await vscode.window.showQuickPick(liveTypeQuickPickItems, {
-    title: '開催形式を選択'
+  const type = await vscode.window.showQuickPick(liveTypeQuickPickItems, {
+    title: '開催形式を選択 (schema:eventAttendanceMode)'
   })
-  const attendanceMode =
-    liveType?.label === 'none' ? undefined : liveType?.label
+  if (typeof type === 'undefined') return
 
   // 出演者
   const actors = await vscode.window.showQuickPick(castQuickPickItems, {
@@ -103,7 +126,7 @@ async function inputLiveInfo(): Promise<Live | undefined> {
     date,
     url,
     actors: getLabels(actors),
-    attendanceMode
+    attendanceMode: type.label === 'none' ? undefined : type.label
   }
 }
 
@@ -115,7 +138,7 @@ export async function createLiveData(editor: vscode.TextEditor) {
   const liveInfo = await inputLiveInfo()
   if (!liveInfo) return
 
-  const rdf = convert2LiveRDF(liveInfo)
+  const rdf = createLiveRDF(liveInfo)
 
   await insertEditor(editor, rdf)
 }

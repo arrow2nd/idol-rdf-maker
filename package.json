@@ -135,6 +135,7 @@
     "webpack-cli": "^4.9.2"
   },
   "dependencies": {
+    "fast-xml-parser": "^4.0.7",
     "ordinal": "^1.0.3"
   }
 }

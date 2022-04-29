@@ -1,9 +1,12 @@
 import * as vscode from 'vscode'
 
-import { idolQuickPickItems } from '../data/idols'
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
 import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
+import { validateHexColor } from '../libs/validate'
+import { buildXML } from '../libs/xml'
+
+import { idolQuickPickItems } from '../data/idols'
 
 /** ユニット情報 */
 type Unit = {
@@ -15,26 +18,49 @@ type Unit = {
 }
 
 /**
- * 衣装情報を RDF データに変換
+ * ユニット情報の RDF データを作成
  * @param unit ユニット情報
  * @returns RDF データ
  */
-function convert2UnitRDF(unit: Unit) {
+function createUnitRDF(unit: Unit) {
   const { nameKana, idols, color } = unit
 
-  const resouce = encodeURIComponent(unit.name)
+  const resource = encodeURIComponent(unit.name)
   const name = escapeHTML(unit.name)
   const desc = escapeHTML(unit.desc)
 
-  return `<rdf:Description rdf:about="${resouce}">
-  <schema:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</schema:name>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">${name}</rdfs:label>
-  <imas:nameKana xml:lang="ja">${nameKana}</imas:nameKana>
-  ${idols.map((idol) => `<schema:member rdf:resource="${idol}"/>`).join('\n  ')}
-  <imas:Color rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">${color}</imas:Color>
-  <schema:description xml:lang="ja">${desc}</schema:description>
-  <rdf:type rdf:resource="https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit"/>
-</rdf:Description>`
+  const unitData = {
+    'rdf:Description': {
+      '@_rdf:about': resource,
+      'schema:name': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
+        '#text': name
+      },
+      'rdfs:label': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
+        '#text': name
+      },
+      'imas:nameKana': {
+        '@_xml:lang': 'ja',
+        '#text': nameKana
+      },
+      'schema:member': idols.map((e) => ({ '@_rdf:resource': e })),
+      'imas:Color': {
+        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#hexBinary',
+        '#text': color
+      },
+      'schema:description': {
+        '@_xml:lang': 'ja',
+        '#text': desc
+      },
+      'rdf:type': {
+        '@_rdf:resource':
+          'https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit'
+      }
+    }
+  }
+
+  return buildXML(unitData)
 }
 
 /**
@@ -57,10 +83,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
   // カラーコード
   const color = await showInputBox({
     title: 'イメージカラーのカラーコード (imas:Color)',
-    validateInput: (value) =>
-      value === '' || /^[A-Fa-f0-9]{6}$/.test(value)
-        ? undefined
-        : '6ケタの16進数カラーコードを入力してください'
+    validateInput: validateHexColor
   })
   if (typeof color === 'undefined') return
 
@@ -70,7 +93,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
   })
   if (typeof desc === 'undefined') return
 
-  // アイドルを選択
+  // 所属アイドル
   const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
     ...commonQuickPickOptions,
     title: '所属アイドルを選択 (schema:member)',
@@ -95,7 +118,7 @@ export async function createUnitData(editor: vscode.TextEditor) {
   const unitInfo = await inputUnitInfo()
   if (!unitInfo) return
 
-  const rdf = convert2UnitRDF(unitInfo)
+  const rdf = createUnitRDF(unitInfo)
 
   await insertEditor(editor, rdf)
 }
