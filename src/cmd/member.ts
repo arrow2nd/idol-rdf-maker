@@ -12,7 +12,7 @@ type CreateMemberType = 'imas:Whose' | 'schema:member'
 /**
  * imas:Whose / schema:member を作成
  * @param editor TextEditor
- * @param type 作成する語彙の種類
+ * @param type 作成するデータの語彙
  * @returns RDF データ
  */
 export async function createMemberData(
