@@ -131,7 +131,8 @@
     "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "create:idols": "ts-node ./src/tools/create-idols.ts"
+    "create:data": "ts-node ./src/tools/create-idols.ts",
+    "fmt:data": "prettier --write ./src/data/*"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
