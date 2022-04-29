@@ -10,6 +10,17 @@
   "categories": [
     "Other"
   ],
+  "author": {
+    "name": "arrow2nd"
+  },
+  "bugs": {
+    "url": "https://github.com/arrow2nd/idol-rdf-maker/issues",
+    "email": "contact@arrow2nd.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arrow2nd/idol-rdf-maker"
+  },
   "activationEvents": [
     "onCommand:idol-rdf-maker.createClothes",
     "onCommand:idol-rdf-maker.createClothesForEachIdol",
@@ -23,6 +34,7 @@
     "onCommand:idol-rdf-maker.createSchemaActor"
   ],
   "main": "./dist/extension.js",
+  "web": "./dist/extension.js",
   "contributes": {
     "menus": {
       "commandPalette": [
@@ -122,6 +134,7 @@
     ]
   },
   "scripts": {
+    "deploy": "vsce publish --yarn",
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -152,6 +165,7 @@
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
     "typescript": "^4.5.5",
+    "vsce": "^2.7.0",
     "webpack": "^5.70.0",
     "webpack-cli": "^4.9.2"
   },
