@@ -1,6 +1,6 @@
 {
   "createClothes.title": "衣装データを作成",
-  "createClothesForEachIdol.title": "衣装データを作成 (リソース名末尾にアイドル名を含む)",
+  "createClothesForEachIdol.title": "衣装データを作成 (アイドル毎に衣装説明が異なる)",
   "createClothesNormalAndAnother.title": "衣装データを作成 (通常衣装 + アナザー衣装)",
   "createUnit.title": "ユニットデータを作成",
   "createLive.title": "ライブデータを作成",
