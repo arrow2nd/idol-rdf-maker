@@ -1,5 +1,7 @@
 # idol-rdf-maker
 
+[![update](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/update.yml/badge.svg)](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/update.yml)
+
 [im@sparql](https://sparql.crssnky.xyz/imas/) の RDF データ作成をちょっとだけサポートする VSCode 拡張
 
 ![clothes](https://user-images.githubusercontent.com/44780846/165919803-49e22b6f-e2a8-41df-ac33-8fa620096ca0.gif)
