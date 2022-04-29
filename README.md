@@ -2,12 +2,37 @@
 
 [im@sparql](https://sparql.crssnky.xyz/imas/) の RDF データ作成をちょっとだけサポートする VSCode 拡張
 
-![demo](https://user-images.githubusercontent.com/44780846/165536132-00ee5053-e42d-4d27-8c1e-e8b5353d6c83.gif)
+![clothes](https://user-images.githubusercontent.com/44780846/165919803-49e22b6f-e2a8-41df-ac33-8fa620096ca0.gif)
+
+## これは何？
+
+対話形式で情報を入力するだけで im@sparql のデータを作成することができる、VSCode 拡張です。
+
+それぞれの機能はコマンドパレットよりコマンドを呼び出すことで、利用できます。
 
 ## 機能
 
-コマンドパレットよりコマンドを呼び出すことで、以下の機能を利用できます。
-
 - 衣装データの作成
+  - createClothes
+  - createClothesForEachIdol (リソース名末尾にアイドル名が付くもの)
+  - createClothesNormalAndAnother (アナザー衣装が存在するもの)
 - ユニットデータの作成
-- imas:Whose / schema:member 語彙の作成
+  - createUnit
+- ライブデータの作成
+  - createLive
+- ランキングデータの作成
+  - createRanking
+- 所属・所有アイドルデータの作成
+  - createImasWhose (imas:whose)
+  - createSchemaMember (schema:member)
+- 出演者・CV データの作成
+  - createImasCV (imas:cv)
+  - createSchemaActor (schema:actor)
+
+## 仕様
+
+- 開いているファイルの拡張子が `.rdf` の場合にのみ、コマンドパレットに表示されます
+
+## 参考
+
+- [im@sparql](https://sparql.crssnky.xyz/imas/) にある RDFmaker
