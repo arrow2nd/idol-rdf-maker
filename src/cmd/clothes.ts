@@ -2,7 +2,12 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
+import {
+  commonQuickPickOptions,
+  getLabels,
+  manyQuickPickPlaceHolder,
+  showInputBox
+} from '../libs/input'
 import { buildXML } from '../libs/xml'
 
 import { idolQuickPickItems } from '../data/idols'
@@ -122,6 +127,7 @@ async function inputClothesInfo(): Promise<Clothes | undefined> {
   const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
     ...commonQuickPickOptions,
     title: '所有アイドルを選択 (imas:Whose)',
+    placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
   })
   if (typeof idols === 'undefined') return

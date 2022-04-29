@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { commonQuickPickOptions } from '../libs/input'
+import { commonQuickPickOptions, manyQuickPickPlaceHolder } from '../libs/input'
 import { buildXML } from '../libs/xml'
 
 import { castQuickPickItems } from '../data/casts'
@@ -22,6 +22,7 @@ export async function createCastData(
   const actors = await vscode.window.showQuickPick(castQuickPickItems, {
     ...commonQuickPickOptions,
     title: `声優を選択 (${type})`,
+    placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
   })
   if (!actors) return

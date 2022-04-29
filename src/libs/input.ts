@@ -21,6 +21,10 @@ export const commonQuickPickOptions: vscode.QuickPickOptions = {
   ignoreFocusOut: true
 }
 
+/** 複数選択可能な QuickPick の共通プレースホルダ */
+export const manyQuickPickPlaceHolder =
+  'チェックボックスをクリック・Spaceキーで選択'
+
 /**
  * ラベル文字列を取得
  * @param items 選択要素

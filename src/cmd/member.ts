@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { commonQuickPickOptions } from '../libs/input'
+import { commonQuickPickOptions, manyQuickPickPlaceHolder } from '../libs/input'
 import { buildXML } from '../libs/xml'
 
 import { idolQuickPickItems } from '../data/idols'
@@ -22,6 +22,7 @@ export async function createMemberData(
   const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
     ...commonQuickPickOptions,
     title: `アイドルを選択 (${type})`,
+    placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
   })
   if (!idols) return

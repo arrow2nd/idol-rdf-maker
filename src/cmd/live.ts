@@ -2,7 +2,12 @@ import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
 import { escapeHTML } from '../libs/escape'
-import { commonQuickPickOptions, getLabels, showInputBox } from '../libs/input'
+import {
+  commonQuickPickOptions,
+  getLabels,
+  manyQuickPickPlaceHolder,
+  showInputBox
+} from '../libs/input'
 import { validateDate, validateURL } from '../libs/validate'
 import { buildXML } from '../libs/xml'
 
@@ -116,6 +121,7 @@ async function inputLiveInfo(): Promise<Live | undefined> {
   const actors = await vscode.window.showQuickPick(castQuickPickItems, {
     ...commonQuickPickOptions,
     title: '出演者を選択 (schema:actor)',
+    placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
   })
   if (typeof actors === 'undefined') return
