@@ -1,6 +1,10 @@
 # idol-rdf-maker
 
+[![publish](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/publish.yml/badge.svg)](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/publish.yml)
 [![update](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/update.yml/badge.svg)](https://github.com/arrow2nd/idol-rdf-maker/actions/workflows/update.yml)
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/arrow2nd.idol-rdf-maker)
+![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/arrow2nd.idol-rdf-maker)
+[![GitHub license](https://img.shields.io/github/license/arrow2nd/idol-rdf-maker)](https://github.com/arrow2nd/idol-rdf-maker/blob/main/LICENSE)
 
 [im@sparql](https://sparql.crssnky.xyz/imas/) の RDF データ作成をちょっとだけサポートする VSCode 拡張
 
