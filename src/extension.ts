@@ -1,6 +1,6 @@
 import * as vscode from 'vscode'
 
-import { createCastData } from './cmd/actor'
+import { createCastData } from './cmd/cast'
 import { createClothesData } from './cmd/clothes'
 import { createLiveData } from './cmd/live'
 import { createMemberData } from './cmd/member'
