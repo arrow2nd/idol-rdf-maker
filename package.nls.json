@@ -2,9 +2,11 @@
   "createClothes.title": "Create Clothes Data",
   "createClothesForEachIdol.title": "Create Clothes Data (For Each Idols)",
   "createClothesNormalAndAnother.title": "Create Clothes Data (Normal Clothes + Another Clothes)",
-  "createImasWhose.title": "Create imas:whose",
-  "createSchemaMember.title": "Create schema:member",
   "createUnit.title": "Create Unit Data",
   "createLive.title": "Create Live Data",
-  "createRanking.title": "Create Cinderella Ranking Data"
+  "createRanking.title": "Create Ranking Data (Cinderella Girls)",
+  "createImasWhose.title": "Create imas:whose (Idol)",
+  "createSchemaMember.title": "Create schema:member (Idol)",
+  "createImasCV.title": "Create imas:cv (Voice Actor)",
+  "createSchemaActor.title": "Create schema:actor (Voice Actor)"
 }

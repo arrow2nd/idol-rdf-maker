@@ -14,11 +14,13 @@
     "onCommand:idol-rdf-maker.createClothes",
     "onCommand:idol-rdf-maker.createClothesForEachIdol",
     "onCommand:idol-rdf-maker.createClothesNormalAndAnother",
-    "onCommand:idol-rdf-maker.createImasWhose",
-    "onCommand:idol-rdf-maker.createSchemaMember",
     "onCommand:idol-rdf-maker.createUnit",
     "onCommand:idol-rdf-maker.createLive",
-    "onCommand:idol-rdf-maker.createRanking"
+    "onCommand:idol-rdf-maker.createRanking",
+    "onCommand:idol-rdf-maker.createImasWhose",
+    "onCommand:idol-rdf-maker.createSchemaMember",
+    "onCommand:idol-rdf-maker.createImasCV",
+    "onCommand:idol-rdf-maker.createSchemaActor"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -55,6 +57,14 @@
         {
           "command": "idol-rdf-maker.createRanking",
           "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createImasCV",
+          "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createSchemaActor",
+          "when": "resourceExtname == .rdf"
         }
       ]
     },
@@ -75,16 +85,6 @@
         "category": "RDFMaker"
       },
       {
-        "command": "idol-rdf-maker.createImasWhose",
-        "title": "%createImasWhose.title%",
-        "category": "RDFMaker"
-      },
-      {
-        "command": "idol-rdf-maker.createSchemaMember",
-        "title": "%createSchemaMember.title%",
-        "category": "RDFMaker"
-      },
-      {
         "command": "idol-rdf-maker.createUnit",
         "title": "%createUnit.title%",
         "category": "RDFMaker"
@@ -97,6 +97,26 @@
       {
         "command": "idol-rdf-maker.createRanking",
         "title": "%createRanking.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createImasWhose",
+        "title": "%createImasWhose.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createSchemaMember",
+        "title": "%createSchemaMember.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createImasCV",
+        "title": "%createImasCV.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createSchemaActor",
+        "title": "%createSchemaActor.title%",
         "category": "RDFMaker"
       }
     ]

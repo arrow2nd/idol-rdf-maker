@@ -1,5 +1,6 @@
 import * as vscode from 'vscode'
 
+import { createCastData } from './cmd/actor'
 import { createClothesData } from './cmd/clothes'
 import { createLiveData } from './cmd/live'
 import { createMemberData } from './cmd/member'
@@ -44,6 +45,15 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerTextEditorCommand(
       'idol-rdf-maker.createSchemaMember',
       (textEditor) => createMemberData(textEditor, 'schema:member')
+    ),
+    // cast
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createImasCV',
+      (textEditor) => createCastData(textEditor, 'imas:cv')
+    ),
+    vscode.commands.registerTextEditorCommand(
+      'idol-rdf-maker.createSchemaActor',
+      (textEditor) => createCastData(textEditor, 'schema:actor')
     )
   ]
 

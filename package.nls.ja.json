@@ -2,9 +2,11 @@
   "createClothes.title": "衣装データを作成",
   "createClothesForEachIdol.title": "衣装データを作成 (リソース名末尾にアイドル名を含む)",
   "createClothesNormalAndAnother.title": "衣装データを作成 (通常衣装 + アナザー衣装)",
-  "createImasWhose.title": "imas:whose を作成",
-  "createSchemaMember.title": "schema:member を作成",
   "createUnit.title": "ユニットデータを作成",
   "createLive.title": "ライブデータを作成",
-  "createRanking.title": "ランキングデータを作成 (シンデレラガールズ)"
+  "createRanking.title": "ランキングデータを作成 (シンデレラガールズ)",
+  "createImasWhose.title": "imas:whose を作成",
+  "createSchemaMember.title": "schema:member を作成",
+  "createImasCV.title": "imas:cv を作成",
+  "createSchemaActor.title": "schema:actor を作成"
 }
