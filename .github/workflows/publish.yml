@@ -21,8 +21,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Publish
-        run: yarn deploy
+      - name: Package & Publish
+        run: |
+          yarn vsce:package
+          yarn vsce:deploy
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
