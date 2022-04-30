@@ -135,7 +135,8 @@
     ]
   },
   "scripts": {
-    "deploy": "vsce publish --yarn",
+    "vsce:deploy": "vsce publish --yarn",
+    "vsce:package": "vsce package",
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
     "watch": "webpack --watch",
