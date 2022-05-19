@@ -8,5 +8,6 @@
   "createImasWhose.title": "imas:whose を作成",
   "createSchemaMember.title": "schema:member を作成",
   "createImasCV.title": "imas:cv を作成",
-  "createSchemaActor.title": "schema:actor を作成"
+  "createSchemaActor.title": "schema:actor を作成",
+  "createCD.title": "CD データを作成"
 }

@@ -32,7 +32,8 @@
     "onCommand:idol-rdf-maker.createImasWhose",
     "onCommand:idol-rdf-maker.createSchemaMember",
     "onCommand:idol-rdf-maker.createImasCV",
-    "onCommand:idol-rdf-maker.createSchemaActor"
+    "onCommand:idol-rdf-maker.createSchemaActor",
+    "onCommand:idol-rdf-maker.createCD"
   ],
   "main": "./dist/extension.js",
   "web": "./dist/extension.js",
@@ -77,6 +78,10 @@
         },
         {
           "command": "idol-rdf-maker.createSchemaActor",
+          "when": "resourceExtname == .rdf"
+        },
+        {
+          "command": "idol-rdf-maker.createCD",
           "when": "resourceExtname == .rdf"
         }
       ]
@@ -130,6 +135,11 @@
       {
         "command": "idol-rdf-maker.createSchemaActor",
         "title": "%createSchemaActor.title%",
+        "category": "RDFMaker"
+      },
+      {
+        "command": "idol-rdf-maker.createCD",
+        "title": "%createCD.title%",
         "category": "RDFMaker"
       }
     ]

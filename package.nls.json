@@ -8,5 +8,6 @@
   "createImasWhose.title": "Create imas:whose (Idol)",
   "createSchemaMember.title": "Create schema:member (Idol)",
   "createImasCV.title": "Create imas:cv (Voice Actor)",
-  "createSchemaActor.title": "Create schema:actor (Voice Actor)"
+  "createSchemaActor.title": "Create schema:actor (Voice Actor)",
+  "createCD.title": "Create CD Data"
 }
