@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { escapeHTML } from '../libs/escape'
+import { fixedEncodeURIComponent } from '../libs/encode'
 import {
   commonQuickPickOptions,
   getLabels,
@@ -29,11 +29,7 @@ type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
  * @returns XML オブジェクト
  */
 function createClothesXMLObject(clothes: Clothes): any {
-  const { idols } = clothes
-
-  const resource = encodeURIComponent(clothes.resource)
-  const name = escapeHTML(clothes.name)
-  const desc = escapeHTML(clothes.desc)
+  const { name, desc, idols, resource } = clothes
 
   return {
     '@_rdf:about': resource,
@@ -133,7 +129,7 @@ async function inputClothesInfo(): Promise<Clothes | undefined> {
   if (typeof idols === 'undefined') return
 
   return {
-    resource,
+    resource: fixedEncodeURIComponent(resource),
     name,
     desc,
     idols: getLabels(idols)

@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { escapeHTML } from '../libs/escape'
+import { fixedEncodeURIComponent } from '../libs/encode'
 import {
   commonQuickPickOptions,
   getLabels,
@@ -28,11 +28,9 @@ type Unit = {
  * @returns RDF データ
  */
 function createUnitRDF(unit: Unit) {
-  const { nameKana, idols, color } = unit
+  const { name, desc, nameKana, idols, color } = unit
 
-  const resource = encodeURIComponent(unit.name)
-  const name = escapeHTML(unit.name)
-  const desc = escapeHTML(unit.desc)
+  const resource = fixedEncodeURIComponent(name)
 
   const unitData = {
     'rdf:Description': {

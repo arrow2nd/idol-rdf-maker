@@ -1,7 +1,7 @@
 import * as vscode from 'vscode'
 
 import { insertEditor } from '../libs/editor'
-import { escapeHTML } from '../libs/escape'
+import { fixedEncodeURIComponent } from '../libs/encode'
 import {
   commonQuickPickOptions,
   getLabels,
@@ -30,11 +30,9 @@ type Live = {
  * @returns RDF データ
  */
 function createLiveRDF(live: Live): string {
-  const { date, url, actors } = live
+  const { title, location, date, url, actors } = live
 
-  const resource = encodeURIComponent(live.title)
-  const title = escapeHTML(live.title)
-  const location = escapeHTML(live.location)
+  const resource = fixedEncodeURIComponent(title)
 
   const attendanceMode = live.attendanceMode && {
     'schema:eventAttendanceMode': {
