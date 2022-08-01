@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs'
 import type { QuickPickItem } from 'vscode'
 
-import { convertBrandName, getUnitName } from './libs/data'
+import { convertBrandName, getUnitName, sortByUnit } from './libs/data'
 import { Bindings, fetchIdolData } from './libs/fetch'
 
 /** SPARQLクエリ (全アイドルを取得) */
@@ -20,7 +20,7 @@ WHERE {
   OPTIONAL{ ?d imas:givenNameKana ?nameKana }
   OPTIONAL{ ?d imas:cv ?cv. FILTER(lang(?cv) = "ja") }
 }
-ORDER BY ?nameKana
+ORDER BY ?brand ?nameKana
 `
 
 /**
@@ -40,7 +40,7 @@ function getValues(b: Bindings) {
 
 /**
  * @param data APIレスポンス配列
- * @returns ソースコード文字列
+ * @returns QuickPickのアイテム配列
  */
 function createIdols(data: Bindings[]): QuickPickItem[] {
   return data.map((e) => {
@@ -74,7 +74,7 @@ function createCasts(data: Bindings[]): QuickPickItem[] {
   const exportData = [
     {
       name: 'idol',
-      items: createIdols(idolData)
+      items: sortByUnit(createIdols(idolData))
     },
     {
       name: 'cast',
