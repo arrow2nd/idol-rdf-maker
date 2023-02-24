@@ -1,63 +1,63 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
-import { createCastData } from './cmd/cast'
-import { createClothesData } from './cmd/clothes'
-import { createLiveData } from './cmd/live'
-import { createMemberData } from './cmd/member'
-import { createRankingData } from './cmd/ranking'
-import { createUnitData } from './cmd/unit'
+import { createCastData } from "./cmd/cast";
+import { createClothesData } from "./cmd/clothes";
+import { createLiveData } from "./cmd/live";
+import { createMemberData } from "./cmd/member";
+import { createRankingData } from "./cmd/ranking";
+import { createUnitData } from "./cmd/unit";
 
 export function activate(context: vscode.ExtensionContext) {
   const disposables: vscode.Disposable[] = [
     // clothes
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createClothes',
-      (textEditor) => createClothesData(textEditor, 'default')
+      "idol-rdf-maker.createClothes",
+      (textEditor) => createClothesData(textEditor, "default")
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createClothesForEachIdol',
-      (textEditor) => createClothesData(textEditor, 'forEachIdol')
+      "idol-rdf-maker.createClothesForEachIdol",
+      (textEditor) => createClothesData(textEditor, "forEachIdol")
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createClothesNormalAndAnother',
-      (textEditor) => createClothesData(textEditor, 'normalAndAnother')
+      "idol-rdf-maker.createClothesNormalAndAnother",
+      (textEditor) => createClothesData(textEditor, "normalAndAnother")
     ),
     // unit
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createUnit',
+      "idol-rdf-maker.createUnit",
       (textEditor) => createUnitData(textEditor)
     ),
     // live
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createLive',
+      "idol-rdf-maker.createLive",
       (textEditor) => createLiveData(textEditor)
     ),
     // ranking
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createRanking',
+      "idol-rdf-maker.createRanking",
       (textEditor) => createRankingData(textEditor)
     ),
     // member
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createImasWhose',
-      (textEditor) => createMemberData(textEditor, 'imas:Whose')
+      "idol-rdf-maker.createImasWhose",
+      (textEditor) => createMemberData(textEditor, "imas:Whose")
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createSchemaMember',
-      (textEditor) => createMemberData(textEditor, 'schema:member')
+      "idol-rdf-maker.createSchemaMember",
+      (textEditor) => createMemberData(textEditor, "schema:member")
     ),
     // cast
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createImasCV',
-      (textEditor) => createCastData(textEditor, 'imas:cv')
+      "idol-rdf-maker.createImasCV",
+      (textEditor) => createCastData(textEditor, "imas:cv")
     ),
     vscode.commands.registerTextEditorCommand(
-      'idol-rdf-maker.createSchemaActor',
-      (textEditor) => createCastData(textEditor, 'schema:actor')
+      "idol-rdf-maker.createSchemaActor",
+      (textEditor) => createCastData(textEditor, "schema:actor")
     )
-  ]
+  ];
 
-  context.subscriptions.push(...disposables)
+  context.subscriptions.push(...disposables);
 }
 
 export function deactivate() {}

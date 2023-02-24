@@ -1,27 +1,27 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
-import { insertEditor } from '../libs/editor'
-import { fixedEncodeURIComponent } from '../libs/encode'
+import { insertEditor } from "../libs/editor";
+import { fixedEncodeURIComponent } from "../libs/encode";
 import {
   commonQuickPickOptions,
   getLabels,
   manyQuickPickPlaceHolder,
   showInputBox
-} from '../libs/input'
-import { buildXML } from '../libs/xml'
+} from "../libs/input";
+import { buildXML } from "../libs/xml";
 
-import { idolQuickPickItems } from '../data/idols'
+import { idolQuickPickItems } from "../data/idols";
 
 /** 衣装情報 */
 type Clothes = {
-  resource: string
-  name: string
-  desc: string
-  idols: string[]
-}
+  resource: string;
+  name: string;
+  desc: string;
+  idols: string[];
+};
 
 /** 作成する衣装データの種類 */
-type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
+type CreateClothesType = "default" | "forEachIdol" | "normalAndAnother";
 
 /**
  * 衣装情報の XML オブジェクトを作成
@@ -29,28 +29,28 @@ type CreateClothesType = 'default' | 'forEachIdol' | 'normalAndAnother'
  * @returns XML オブジェクト
  */
 function createClothesXMLObject(clothes: Clothes): any {
-  const { name, desc, idols, resource } = clothes
+  const { name, desc, idols, resource } = clothes;
 
   return {
-    '@_rdf:about': resource,
-    'schema:name': {
-      '@_xml:lang': 'ja',
-      '#text': name
+    "@_rdf:about": resource,
+    "schema:name": {
+      "@_xml:lang": "ja",
+      "#text": name
     },
-    'rdfs:label': {
-      '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
-      '#text': name
+    "rdfs:label": {
+      "@_rdf:datatype": "http://www.w3.org/2001/XMLSchema#string",
+      "#text": name
     },
-    'schema:description': {
-      '@_xml:lang': 'ja',
-      '#text': desc
+    "schema:description": {
+      "@_xml:lang": "ja",
+      "#text": desc
     },
-    'imas:Whose': idols.map((e) => ({ '@_rdf:resource': e })),
-    'rdf:type': {
-      '@_rdf:resource':
-        'https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes'
+    "imas:Whose": idols.map((e) => ({ "@_rdf:resource": e })),
+    "rdf:type": {
+      "@_rdf:resource":
+        "https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes"
     }
-  }
+  };
 }
 
 /**
@@ -60,40 +60,40 @@ function createClothesXMLObject(clothes: Clothes): any {
  * @returns RDF データ
  */
 function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
-  let clothesData = []
+  let clothesData = [];
 
   switch (type) {
     // アイドル毎に衣装データを作成
-    case 'forEachIdol':
+    case "forEachIdol":
       clothesData = clothes.idols.map((idol) =>
         createClothesXMLObject({
           ...clothes,
-          resource: `${clothes.resource}_${idol.replace(/_/g, '')}`,
+          resource: `${clothes.resource}_${idol.replace(/_/g, "")}`,
           idols: [idol]
         })
-      )
-      break
+      );
+      break;
 
     // アナザー衣装も合わせて作成 (TheaterDays)
-    case 'normalAndAnother':
+    case "normalAndAnother":
       clothesData = [
         createClothesXMLObject(clothes),
         createClothesXMLObject({
           ...clothes,
-          resource: clothes.resource + '%2B',
-          name: clothes.name + '+',
+          resource: clothes.resource + "%2B",
+          name: clothes.name + "+",
           desc: `「${clothes.name}」のアナザー衣装です。`
         })
-      ]
-      break
+      ];
+      break;
 
     default:
-      clothesData = [createClothesXMLObject(clothes)]
+      clothesData = [createClothesXMLObject(clothes)];
   }
 
   return buildXML({
-    'rdf:Description': clothesData
-  })
+    "rdf:Description": clothesData
+  });
 }
 
 /**
@@ -103,37 +103,37 @@ function createClothesRDF(clothes: Clothes, type: CreateClothesType): string {
 async function inputClothesInfo(): Promise<Clothes | undefined> {
   // リソース名
   const resource = await showInputBox({
-    title: 'リソース名を入力 (rdf:Description)'
-  })
-  if (typeof resource === 'undefined') return
+    title: "リソース名を入力 (rdf:Description)"
+  });
+  if (typeof resource === "undefined") return;
 
   // 衣装名
   const name = await showInputBox({
-    title: '衣装名を入力 (schema:name)'
-  })
-  if (typeof name === 'undefined') return
+    title: "衣装名を入力 (schema:name)"
+  });
+  if (typeof name === "undefined") return;
 
   // 衣装説明
   const desc = await showInputBox({
-    title: '衣装説明を入力 (schema:description)'
-  })
-  if (typeof desc === 'undefined') return
+    title: "衣装説明を入力 (schema:description)"
+  });
+  if (typeof desc === "undefined") return;
 
   // アイドルを選択
   const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
     ...commonQuickPickOptions,
-    title: '所有アイドルを選択 (imas:Whose)',
+    title: "所有アイドルを選択 (imas:Whose)",
     placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
-  })
-  if (typeof idols === 'undefined') return
+  });
+  if (typeof idols === "undefined") return;
 
   return {
     resource: fixedEncodeURIComponent(resource),
     name,
     desc,
     idols: getLabels(idols)
-  }
+  };
 }
 
 /**
@@ -145,10 +145,10 @@ export async function createClothesData(
   editor: vscode.TextEditor,
   type: CreateClothesType
 ) {
-  const clothesInfo = await inputClothesInfo()
-  if (!clothesInfo) return
+  const clothesInfo = await inputClothesInfo();
+  if (!clothesInfo) return;
 
-  const rdf = createClothesRDF(clothesInfo, type)
+  const rdf = createClothesRDF(clothesInfo, type);
 
-  await insertEditor(editor, rdf)
+  await insertEditor(editor, rdf);
 }

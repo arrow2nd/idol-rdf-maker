@@ -1,26 +1,26 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
-import { insertEditor } from '../libs/editor'
-import { fixedEncodeURIComponent } from '../libs/encode'
+import { insertEditor } from "../libs/editor";
+import { fixedEncodeURIComponent } from "../libs/encode";
 import {
   commonQuickPickOptions,
   getLabels,
   manyQuickPickPlaceHolder,
   showInputBox
-} from '../libs/input'
-import { validateHexColor } from '../libs/validate'
-import { buildXML } from '../libs/xml'
+} from "../libs/input";
+import { validateHexColor } from "../libs/validate";
+import { buildXML } from "../libs/xml";
 
-import { idolQuickPickItems } from '../data/idols'
+import { idolQuickPickItems } from "../data/idols";
 
 /** ユニット情報 */
 type Unit = {
-  name: string
-  nameKana: string
-  color: string
-  desc: string
-  idols: string[]
-}
+  name: string;
+  nameKana: string;
+  color: string;
+  desc: string;
+  idols: string[];
+};
 
 /**
  * ユニット情報の RDF データを作成
@@ -28,42 +28,42 @@ type Unit = {
  * @returns RDF データ
  */
 function createUnitRDF(unit: Unit) {
-  const { name, desc, nameKana, idols, color } = unit
+  const { name, desc, nameKana, idols, color } = unit;
 
-  const resource = fixedEncodeURIComponent(name)
+  const resource = fixedEncodeURIComponent(name);
 
   const unitData = {
-    'rdf:Description': {
-      '@_rdf:about': resource,
-      'schema:name': {
-        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
-        '#text': name
+    "rdf:Description": {
+      "@_rdf:about": resource,
+      "schema:name": {
+        "@_rdf:datatype": "http://www.w3.org/2001/XMLSchema#string",
+        "#text": name
       },
-      'rdfs:label': {
-        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#string',
-        '#text': name
+      "rdfs:label": {
+        "@_rdf:datatype": "http://www.w3.org/2001/XMLSchema#string",
+        "#text": name
       },
-      'imas:nameKana': {
-        '@_xml:lang': 'ja',
-        '#text': nameKana
+      "imas:nameKana": {
+        "@_xml:lang": "ja",
+        "#text": nameKana
       },
-      'schema:member': idols.map((e) => ({ '@_rdf:resource': e })),
-      'imas:Color': {
-        '@_rdf:datatype': 'http://www.w3.org/2001/XMLSchema#hexBinary',
-        '#text': color
+      "schema:member": idols.map((e) => ({ "@_rdf:resource": e })),
+      "imas:Color": {
+        "@_rdf:datatype": "http://www.w3.org/2001/XMLSchema#hexBinary",
+        "#text": color
       },
-      'schema:description': {
-        '@_xml:lang': 'ja',
-        '#text': desc
+      "schema:description": {
+        "@_xml:lang": "ja",
+        "#text": desc
       },
-      'rdf:type': {
-        '@_rdf:resource':
-          'https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit'
+      "rdf:type": {
+        "@_rdf:resource":
+          "https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit"
       }
     }
-  }
+  };
 
-  return buildXML(unitData)
+  return buildXML(unitData);
 }
 
 /**
@@ -73,37 +73,37 @@ function createUnitRDF(unit: Unit) {
 async function inputUnitInfo(): Promise<Unit | undefined> {
   // ユニット名
   const name = await showInputBox({
-    title: 'ユニット名を入力 (rdf:Description / schema:name / rdfs:label)'
-  })
-  if (typeof name === 'undefined') return
+    title: "ユニット名を入力 (rdf:Description / schema:name / rdfs:label)"
+  });
+  if (typeof name === "undefined") return;
 
   // 読み仮名
   const nameKana = await showInputBox({
-    title: '読み仮名を入力 (imas:nameKana)'
-  })
-  if (typeof nameKana === 'undefined') return
+    title: "読み仮名を入力 (imas:nameKana)"
+  });
+  if (typeof nameKana === "undefined") return;
 
   // カラーコード
   const color = await showInputBox({
-    title: 'イメージカラーのカラーコード (imas:Color)',
+    title: "イメージカラーのカラーコード (imas:Color)",
     validateInput: validateHexColor
-  })
-  if (typeof color === 'undefined') return
+  });
+  if (typeof color === "undefined") return;
 
   // 衣装説明
   const desc = await showInputBox({
-    title: '衣装説明を入力 (schema:description)'
-  })
-  if (typeof desc === 'undefined') return
+    title: "衣装説明を入力 (schema:description)"
+  });
+  if (typeof desc === "undefined") return;
 
   // 所属アイドル
   const idols = await vscode.window.showQuickPick(idolQuickPickItems, {
     ...commonQuickPickOptions,
-    title: '所属アイドルを選択 (schema:member)',
+    title: "所属アイドルを選択 (schema:member)",
     placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
-  })
-  if (typeof idols === 'undefined') return
+  });
+  if (typeof idols === "undefined") return;
 
   return {
     name,
@@ -111,7 +111,7 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
     color: color.toUpperCase(),
     desc,
     idols: getLabels(idols)
-  }
+  };
 }
 
 /**
@@ -119,10 +119,10 @@ async function inputUnitInfo(): Promise<Unit | undefined> {
  * @param editor TextEditor
  */
 export async function createUnitData(editor: vscode.TextEditor) {
-  const unitInfo = await inputUnitInfo()
-  if (!unitInfo) return
+  const unitInfo = await inputUnitInfo();
+  if (!unitInfo) return;
 
-  const rdf = createUnitRDF(unitInfo)
+  const rdf = createUnitRDF(unitInfo);
 
-  await insertEditor(editor, rdf)
+  await insertEditor(editor, rdf);
 }
