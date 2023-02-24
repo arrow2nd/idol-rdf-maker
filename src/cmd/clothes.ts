@@ -31,25 +31,28 @@ type CreateClothesType = "default" | "forEachIdol" | "normalAndAnother";
 function createClothesXMLObject(clothes: Clothes): any {
   const { name, desc, idols, resource } = clothes;
 
-  return {
+  const obj = {
     "@_rdf:about": resource,
-    "schema:name": {
-      "@_xml:lang": "ja",
-      "#text": name
-    },
+    "schema:name": { "@_xml:lang": "ja", "#text": name },
     "rdfs:label": {
       "@_rdf:datatype": "http://www.w3.org/2001/XMLSchema#string",
       "#text": name
-    },
-    "schema:description": {
-      "@_xml:lang": "ja",
-      "#text": desc
     },
     "imas:Whose": idols.map((e) => ({ "@_rdf:resource": e })),
     "rdf:type": {
       "@_rdf:resource":
         "https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes"
     }
+  };
+
+  // buildXML() で空要素タグを許可しているので、衣装説明が無い場合はタグを作らない
+  if (desc === "") {
+    return obj;
+  }
+
+  return {
+    ...obj,
+    "schema:description": { "@_xml:lang": "ja", "#text": desc }
   };
 }
 
