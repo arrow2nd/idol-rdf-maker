@@ -23,8 +23,8 @@ jobs:
 
       - name: Package & Publish
         run: |
-          yarn vsce:package
-          yarn vsce:deploy
+          npm vsce:package
+          npm vsce:deploy
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
 
