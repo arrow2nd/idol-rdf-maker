@@ -3,9 +3,9 @@
   "displayName": "Idol RDF Maker",
   "description": "RDF maker for im@sparql",
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "engines": {
-    "vscode": "^1.66.0"
+    "vscode": "^1.75.1"
   },
   "categories": [
     "Other"
@@ -16,7 +16,7 @@
   },
   "bugs": {
     "url": "https://github.com/arrow2nd/idol-rdf-maker/issues",
-    "email": "contact@arrow2nd.com"
+    "email": "dev@arrow2nd.com"
   },
   "repository": {
     "type": "git",
