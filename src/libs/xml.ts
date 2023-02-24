@@ -1,4 +1,4 @@
-import { XMLBuilder } from 'fast-xml-parser'
+import { XMLBuilder } from "fast-xml-parser";
 
 /**
  * XML 文字列をビルド
@@ -10,7 +10,7 @@ export function buildXML(obj: any): string {
     ignoreAttributes: false,
     format: true,
     suppressEmptyNode: true
-  })
+  });
 
-  return builder.build(obj)
+  return builder.build(obj);
 }

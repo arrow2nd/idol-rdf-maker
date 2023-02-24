@@ -1,4 +1,4 @@
-import { escape, unescape } from 'querystring'
+import { escape, unescape } from "querystring";
 
 /**
  * RFC 3986 に対応した encodeURIComponent
@@ -9,6 +9,6 @@ import { escape, unescape } from 'querystring'
 export function fixedEncodeURIComponent(str: string): string {
   return encodeURIComponent(str).replace(
     /[!'()*]/g,
-    (c) => '%' + c.charCodeAt(0).toString(16).toUpperCase()
-  )
+    (c) => "%" + c.charCodeAt(0).toString(16).toUpperCase()
+  );
 }

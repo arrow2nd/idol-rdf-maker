@@ -3,7 +3,7 @@ name: publish
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 jobs:
   publish:
@@ -15,7 +15,7 @@ jobs:
       - name: Install Node.js, npm and Yarn
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
           cache: yarn
 
       - name: Install dependencies

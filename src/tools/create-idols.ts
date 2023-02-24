@@ -1,8 +1,8 @@
-import { writeFileSync } from 'fs'
-import type { QuickPickItem } from 'vscode'
+import { writeFileSync } from "fs";
+import type { QuickPickItem } from "vscode";
 
-import { convertBrandName, getUnitName, sortByUnit } from './libs/data'
-import { Bindings, fetchIdolData } from './libs/fetch'
+import { convertBrandName, getUnitName, sortByUnit } from "./libs/data";
+import { Bindings, fetchIdolData } from "./libs/fetch";
 
 /** SPARQLクエリ (全アイドルを取得) */
 const query = `
@@ -21,21 +21,21 @@ WHERE {
   OPTIONAL{ ?d imas:cv ?cv. FILTER(lang(?cv) = "ja") }
 }
 ORDER BY ?brand ?nameKana
-`
+`;
 
 /**
  * @param b Bindings
  * @returns 値
  */
 function getValues(b: Bindings) {
-  const label = b.d.value.match(/detail\/(.+)$/)![1]
+  const label = b.d.value.match(/detail\/(.+)$/)![1];
 
   return {
     label,
-    nameKana: b.nameKana.value.replace(/[・\s]/g, ''),
+    nameKana: b.nameKana.value.replace(/[・\s]/g, ""),
     brand: convertBrandName(label, b.brand.value),
     unit: getUnitName(label)
-  }
+  };
 }
 
 /**
@@ -44,50 +44,50 @@ function getValues(b: Bindings) {
  */
 function createIdols(data: Bindings[]): QuickPickItem[] {
   return data.map((e) => {
-    const { label, nameKana, brand, unit } = getValues(e)
+    const { label, nameKana, brand, unit } = getValues(e);
 
     return {
       label,
       description: `${e.name.value} (${nameKana})`,
-      detail: `${brand}${unit ? ' / ' + unit : ''}`
-    }
-  })
+      detail: `${brand}${unit ? " / " + unit : ""}`
+    };
+  });
 }
 
 function createCasts(data: Bindings[]): QuickPickItem[] {
   return data
     .filter((e) => e.cv?.value)
     .map((e) => {
-      const { nameKana, brand, unit } = getValues(e)
+      const { nameKana, brand, unit } = getValues(e);
 
       return {
         label: e.cv.value,
         description: `${e.name.value} (${nameKana})`,
-        detail: `${brand}${unit ? ' / ' + unit : ''}`
-      }
-    })
+        detail: `${brand}${unit ? " / " + unit : ""}`
+      };
+    });
 }
 
-;(async () => {
-  const idolData = await fetchIdolData(query)
+(async () => {
+  const idolData = await fetchIdolData(query);
 
   const exportData = [
     {
-      name: 'idol',
+      name: "idol",
       items: sortByUnit(createIdols(idolData))
     },
     {
-      name: 'cast',
+      name: "cast",
       items: createCasts(idolData)
     }
-  ]
+  ];
 
   for (const { name, items } of exportData) {
-    const json = JSON.stringify(items, null, '  ')
-    const result = `import type { QuickPickItem } from 'vscode'\n\nexport const ${name}QuickPickItems: QuickPickItem[] = ${json}`
+    const json = JSON.stringify(items, null, "  ");
+    const result = `import type { QuickPickItem } from 'vscode'\n\nexport const ${name}QuickPickItems: QuickPickItem[] = ${json}`;
 
-    writeFileSync(`./src/data/${name}s.ts`, result)
+    writeFileSync(`./src/data/${name}s.ts`, result);
   }
 
-  console.log('[ SUCCESS ]')
-})()
+  console.log("[ SUCCESS ]");
+})();

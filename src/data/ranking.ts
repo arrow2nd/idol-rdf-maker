@@ -1,12 +1,12 @@
-import { QuickPickItem } from 'vscode'
+import { QuickPickItem } from "vscode";
 
 export const rankingTypeQuickPickItems: QuickPickItem[] = [
   {
-    label: 'CinderellaGirls',
-    detail: 'シンデレラガールズ総選挙'
+    label: "CinderellaGirls",
+    detail: "シンデレラガールズ総選挙"
   },
   {
-    label: 'VoiceIdol',
-    detail: 'ボイスアイドルオーディション'
+    label: "VoiceIdol",
+    detail: "ボイスアイドルオーディション"
   }
-]
+];

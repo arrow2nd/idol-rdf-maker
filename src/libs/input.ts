@@ -1,4 +1,4 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
 /**
  * InputBox を表示
@@ -11,7 +11,7 @@ export function showInputBox(
   return vscode.window.showInputBox({
     ...options,
     ignoreFocusOut: true
-  })
+  });
 }
 
 /** QuickPick の共通設定 */
@@ -19,11 +19,11 @@ export const commonQuickPickOptions: vscode.QuickPickOptions = {
   matchOnDescription: true,
   matchOnDetail: true,
   ignoreFocusOut: true
-}
+};
 
 /** 複数選択可能な QuickPick の共通プレースホルダ */
 export const manyQuickPickPlaceHolder =
-  'チェックボックスをクリック・Spaceキーで選択'
+  "チェックボックスをクリック・Spaceキーで選択";
 
 /**
  * ラベル文字列を取得
@@ -31,5 +31,5 @@ export const manyQuickPickPlaceHolder =
  * @returns ラベル文字列の配列
  */
 export function getLabels(items: vscode.QuickPickItem[]): string[] {
-  return items.map(({ label }) => label)
+  return items.map(({ label }) => label);
 }

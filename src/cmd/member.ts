@@ -1,13 +1,16 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
-import { insertEditor } from '../libs/editor'
-import { commonQuickPickOptions, manyQuickPickPlaceHolder } from '../libs/input'
-import { buildXML } from '../libs/xml'
+import { insertEditor } from "../libs/editor";
+import {
+  commonQuickPickOptions,
+  manyQuickPickPlaceHolder
+} from "../libs/input";
+import { buildXML } from "../libs/xml";
 
-import { idolQuickPickItems } from '../data/idols'
+import { idolQuickPickItems } from "../data/idols";
 
 /** 語彙の種類 */
-type CreateMemberType = 'imas:Whose' | 'schema:member'
+type CreateMemberType = "imas:Whose" | "schema:member";
 
 /**
  * imas:Whose / schema:member を作成
@@ -24,12 +27,12 @@ export async function createMemberData(
     title: `アイドルを選択 (${type})`,
     placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
-  })
-  if (!idols) return
+  });
+  if (!idols) return;
 
   const idolsData = {
-    [type]: idols.map(({ label }) => ({ '@_rdf:resource': label }))
-  }
+    [type]: idols.map(({ label }) => ({ "@_rdf:resource": label }))
+  };
 
-  await insertEditor(editor, buildXML(idolsData))
+  await insertEditor(editor, buildXML(idolsData));
 }

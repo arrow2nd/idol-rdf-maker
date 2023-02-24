@@ -1,13 +1,16 @@
-import * as vscode from 'vscode'
+import * as vscode from "vscode";
 
-import { insertEditor } from '../libs/editor'
-import { commonQuickPickOptions, manyQuickPickPlaceHolder } from '../libs/input'
-import { buildXML } from '../libs/xml'
+import { insertEditor } from "../libs/editor";
+import {
+  commonQuickPickOptions,
+  manyQuickPickPlaceHolder
+} from "../libs/input";
+import { buildXML } from "../libs/xml";
 
-import { castQuickPickItems } from '../data/casts'
+import { castQuickPickItems } from "../data/casts";
 
 /** 語彙の種類 */
-type CreateCastType = 'schema:actor' | 'imas:cv'
+type CreateCastType = "schema:actor" | "imas:cv";
 
 /**
  * schema:actor / imas:cv を作成
@@ -24,12 +27,12 @@ export async function createCastData(
     title: `声優を選択 (${type})`,
     placeHolder: manyQuickPickPlaceHolder,
     canPickMany: true
-  })
-  if (!actors) return
+  });
+  if (!actors) return;
 
   const idolsData = {
-    [type]: actors.map(({ label }) => ({ '@_xml:lang': 'ja', '#text': label }))
-  }
+    [type]: actors.map(({ label }) => ({ "@_xml:lang": "ja", "#text": label }))
+  };
 
-  await insertEditor(editor, buildXML(idolsData))
+  await insertEditor(editor, buildXML(idolsData));
 }
