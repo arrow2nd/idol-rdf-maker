@@ -16,14 +16,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Node.js, npm and Yarn
+      - name: Install Node.js, npm
         uses: actions/setup-node@v2
         with:
-          node-version: "16"
-          cache: yarn
+          node-version: "18"
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: npm install --immutable
 
       - name: Create new branch
         env:
@@ -31,10 +31,10 @@ jobs:
         run: git switch -c ${{ env.NEW_BRANCH_NAME }}
 
       - name: Recreate data
-        run: yarn create:data
+        run: npm run create:data
 
       - name: Format data
-        run: yarn fmt:data
+        run: npm run fmt:data
 
       - name: Commit the changes
         uses: stefanzweifel/git-auto-commit-action@v4
