@@ -187,6 +187,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "シンデレラガールズ"
   },
   {
+    label: "小森結梨",
+    description: "古賀小春 (こがこはる)",
+    detail: "シンデレラガールズ"
+  },
+  {
     label: "竹達彩奈",
     description: "輿水幸子 (こしみずさちこ)",
     detail: "シンデレラガールズ"
@@ -484,6 +489,11 @@ export const castQuickPickItems: QuickPickItem[] = [
   {
     label: "花井美春",
     description: "村上巴 (むらかみともえ)",
+    detail: "シンデレラガールズ"
+  },
+  {
+    label: "原涼子",
+    description: "望月聖 (もちづきひじり)",
     detail: "シンデレラガールズ"
   },
   {
