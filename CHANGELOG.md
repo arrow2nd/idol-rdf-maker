@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.3] - 2023-06-17
+
+### Security
+
+- 依存関係を更新
+
 ## [1.1.2] - 2023-04-22
 
 ### Added
@@ -34,7 +40,8 @@
 
 - リリースしました！
 
-[unreleased]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.2...HEAD
+[unreleased]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.3...HEAD
+[1.1.3]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.0.1...v1.1.0
