@@ -834,7 +834,7 @@ export const castQuickPickItems: QuickPickItem[] = [
   {
     label: "川口莉奈",
     description: "斑鳩ルカ (いかるがるか)",
-    detail: "シャイニーカラーズ"
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
   },
   {
     label: "北原沙弥香",
