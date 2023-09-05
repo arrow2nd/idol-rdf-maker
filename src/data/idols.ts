@@ -1482,11 +1482,6 @@ export const idolQuickPickItems: QuickPickItem[] = [
     detail: "SideM / C.FIRST（くらすふぁーすと）"
   },
   {
-    label: "Ikaruga_Luca",
-    description: "斑鳩ルカ (いかるがるか)",
-    detail: "シャイニーカラーズ"
-  },
-  {
     label: "Sakuragi_Mano",
     description: "櫻木真乃 (さくらぎまの)",
     detail:
@@ -1613,6 +1608,11 @@ export const idolQuickPickItems: QuickPickItem[] = [
     label: "Aketa_Mikoto",
     description: "緋田美琴 (あけたみこと)",
     detail: "シャイニーカラーズ / SHHis（しーず）"
+  },
+  {
+    label: "Ikaruga_Luca",
+    description: "斑鳩ルカ (いかるがるか)",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
   },
   {
     label: "Asahina_Rin",

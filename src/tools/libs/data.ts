@@ -138,6 +138,10 @@ const units: Unit[] = [
   {
     name: "SHHis（しーず）",
     member: ["Nanakusa_Nichika", "Aketa_Mikoto"]
+  },
+  {
+    name: "CoMETIK（こめてぃっく）",
+    member: ["Suzuki_Hana", "Ikaruga_Luca", "Ikuta_Haruki"]
   }
 ];
 
