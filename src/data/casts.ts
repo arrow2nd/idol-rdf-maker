@@ -112,6 +112,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "シンデレラガールズ"
   },
   {
+    label: "松永あかね",
+    description: "イヴ・サンタクロース (いゔさんたくろーす)",
+    detail: "シンデレラガールズ"
+  },
+  {
     label: "春野ななみ",
     description: "上田鈴帆 (うえだすずほ)",
     detail: "シンデレラガールズ"
@@ -119,6 +124,11 @@ export const castQuickPickItems: QuickPickItem[] = [
   {
     label: "のぐちゆり",
     description: "及川雫 (おいかわしずく)",
+    detail: "シンデレラガールズ"
+  },
+  {
+    label: "大木咲絵子",
+    description: "大石泉 (おおいしいずみ)",
     detail: "シンデレラガールズ"
   },
   {
@@ -537,6 +547,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "シンデレラガールズ"
   },
   {
+    label: "市ノ瀬加那",
+    description: "ライラ (らいら)",
+    detail: "シンデレラガールズ"
+  },
+  {
     label: "春瀬なつみ",
     description: "龍崎薫 (りゅうざきかおる)",
     detail: "シンデレラガールズ"
@@ -837,6 +852,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
   },
   {
+    label: "小澤麗那",
+    description: "郁田はるき (いくたはるき)",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+  },
+  {
     label: "北原沙弥香",
     description: "和泉愛依 (いずみめい)",
     detail: "シャイニーカラーズ / Straylight（すとれいらいと）"
@@ -887,6 +907,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     label: "八巻アンナ",
     description: "白瀬咲耶 (しらせさくや)",
     detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+  },
+  {
+    label: "三川華月",
+    description: "鈴木羽那 (すずきはな)",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
   },
   {
     label: "田中有紀",
