@@ -1610,8 +1610,18 @@ export const idolQuickPickItems: QuickPickItem[] = [
     detail: "シャイニーカラーズ / SHHis（しーず）"
   },
   {
+    label: "Suzuki_Hana",
+    description: "鈴木羽那 (すずきはな)",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+  },
+  {
     label: "Ikaruga_Luca",
     description: "斑鳩ルカ (いかるがるか)",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+  },
+  {
+    label: "Ikuta_Haruki",
+    description: "郁田はるき (いくたはるき)",
     detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
   },
   {
