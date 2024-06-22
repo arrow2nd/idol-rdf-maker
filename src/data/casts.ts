@@ -587,6 +587,11 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "ディアリースターズ"
   },
   {
+    label: "長月あおい",
+    description: "花海咲季 (はなみさき)",
+    detail: "Gakuen"
+  },
+  {
     label: "Machico",
     description: "伊吹翼 (いぶきつばさ)",
     detail: "ミリオンライブ！"
