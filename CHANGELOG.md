@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.2.1] - 2024-06-23
+
+### Added
+
+- アイドルを更新
+
 ## [1.2.0] - 2023-09-05
 
 ### Added
@@ -46,7 +52,8 @@
 
 - リリースしました！
 
-[unreleased]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.2.0...HEAD
+[unreleased]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.2.0...v1.2.1
 [1.2.0]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.2...v1.2.0
 [1.1.2]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/arrow2nd/idol-rdf-maker/compare/v1.1.0...v1.1.1
