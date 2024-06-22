@@ -3,7 +3,7 @@
   "displayName": "Idol RDF Maker",
   "description": "RDF maker for im@sparql",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "engines": {
     "vscode": "^1.77.0"
   },
