@@ -2,1676 +2,1676 @@ import type { QuickPickItem } from "vscode";
 
 export const idolQuickPickItems: QuickPickItem[] = [
   {
-    label: "Akizuki_Ritsuko",
+    detail: "765PRO ALLSTARS",
     description: "秋月律子 (あきづきりつこ)",
-    detail: "765PRO ALLSTARS"
+    label: "Akizuki_Ritsuko"
   },
   {
-    label: "Amami_Haruka",
+    detail: "765PRO ALLSTARS",
     description: "天海春香 (あまみはるか)",
-    detail: "765PRO ALLSTARS"
+    label: "Amami_Haruka"
   },
   {
-    label: "Ganaha_Hibiki",
+    detail: "765PRO ALLSTARS",
     description: "我那覇響 (がなはひびき)",
-    detail: "765PRO ALLSTARS"
+    label: "Ganaha_Hibiki"
   },
   {
-    label: "Kikuchi_Makoto",
+    detail: "765PRO ALLSTARS",
     description: "菊地真 (きくちまこと)",
-    detail: "765PRO ALLSTARS"
+    label: "Kikuchi_Makoto"
   },
   {
-    label: "Kisaragi_Chihaya",
+    detail: "765PRO ALLSTARS",
     description: "如月千早 (きさらぎちはや)",
-    detail: "765PRO ALLSTARS"
+    label: "Kisaragi_Chihaya"
   },
   {
-    label: "Shijou_Takane",
+    detail: "765PRO ALLSTARS",
     description: "四条貴音 (しじょうたかね)",
-    detail: "765PRO ALLSTARS"
+    label: "Shijou_Takane"
   },
   {
-    label: "Takatsuki_Yayoi",
+    detail: "765PRO ALLSTARS",
     description: "高槻やよい (たかつきやよい)",
-    detail: "765PRO ALLSTARS"
+    label: "Takatsuki_Yayoi"
   },
   {
-    label: "Hagiwara_Yukiho",
+    detail: "765PRO ALLSTARS",
     description: "萩原雪歩 (はぎわらゆきほ)",
-    detail: "765PRO ALLSTARS"
+    label: "Hagiwara_Yukiho"
   },
   {
-    label: "Futami_Ami",
+    detail: "765PRO ALLSTARS",
     description: "双海亜美 (ふたみあみ)",
-    detail: "765PRO ALLSTARS"
+    label: "Futami_Ami"
   },
   {
-    label: "Futami_Mami",
+    detail: "765PRO ALLSTARS",
     description: "双海真美 (ふたみまみ)",
-    detail: "765PRO ALLSTARS"
+    label: "Futami_Mami"
   },
   {
-    label: "Hoshii_Miki",
+    detail: "765PRO ALLSTARS",
     description: "星井美希 (ほしいみき)",
-    detail: "765PRO ALLSTARS"
+    label: "Hoshii_Miki"
   },
   {
-    label: "Miura_Azusa",
+    detail: "765PRO ALLSTARS",
     description: "三浦あずさ (みうらあずさ)",
-    detail: "765PRO ALLSTARS"
+    label: "Miura_Azusa"
   },
   {
-    label: "Minase_Iori",
+    detail: "765PRO ALLSTARS",
     description: "水瀬伊織 (みなせいおり)",
-    detail: "765PRO ALLSTARS"
+    label: "Minase_Iori"
   },
   {
-    label: "Akizuki_Ryo_876",
+    detail: "ディアリースターズ",
     description: "秋月涼 (あきづきりょう)",
-    detail: "ディアリースターズ"
+    label: "Akizuki_Ryo_876"
   },
   {
-    label: "Suzuki_Ayane",
+    detail: "ディアリースターズ",
     description: "サイネリア (さいねりあ)",
-    detail: "ディアリースターズ"
+    label: "Suzuki_Ayane"
   },
   {
-    label: "Sakurai_Yumeko",
+    detail: "ディアリースターズ",
     description: "桜井夢子 (さくらいゆめこ)",
-    detail: "ディアリースターズ"
+    label: "Sakurai_Yumeko"
   },
   {
-    label: "Hidaka_Ai",
+    detail: "ディアリースターズ",
     description: "日高愛 (ひだかあい)",
-    detail: "ディアリースターズ"
+    label: "Hidaka_Ai"
   },
   {
-    label: "Mizutani_Eri",
+    detail: "ディアリースターズ",
     description: "水谷絵理 (みずたにえり)",
-    detail: "ディアリースターズ"
+    label: "Mizutani_Eri"
   },
   {
-    label: "Ibuki_Tsubasa",
+    detail: "ミリオンライブ！",
     description: "伊吹翼 (いぶきつばさ)",
-    detail: "ミリオンライブ！"
+    label: "Ibuki_Tsubasa"
   },
   {
-    label: "Emily_Stewart",
+    detail: "ミリオンライブ！",
     description: "エミリー (えみりーすちゅあーと)",
-    detail: "ミリオンライブ！"
+    label: "Emily_Stewart"
   },
   {
-    label: "Ogami_Tamaki",
+    detail: "ミリオンライブ！",
     description: "大神環 (おおがみたまき)",
-    detail: "ミリオンライブ！"
+    label: "Ogami_Tamaki"
   },
   {
-    label: "Kasuga_Mirai",
+    detail: "ミリオンライブ！",
     description: "春日未来 (かすがみらい)",
-    detail: "ミリオンライブ！"
+    label: "Kasuga_Mirai"
   },
   {
-    label: "Kitakami_Reika",
+    detail: "ミリオンライブ！",
     description: "北上麗花 (きたかみれいか)",
-    detail: "ミリオンライブ！"
+    label: "Kitakami_Reika"
   },
   {
-    label: "Kitazawa_Shiho",
+    detail: "ミリオンライブ！",
     description: "北沢志保 (きたざわしほ)",
-    detail: "ミリオンライブ！"
+    label: "Kitazawa_Shiho"
   },
   {
-    label: "Kinoshita_Hinata",
+    detail: "ミリオンライブ！",
     description: "木下ひなた (きのしたひなた)",
-    detail: "ミリオンライブ！"
+    label: "Kinoshita_Hinata"
   },
   {
-    label: "Kousaka_Umi",
+    detail: "ミリオンライブ！",
     description: "高坂海美 (こうさかうみ)",
-    detail: "ミリオンライブ！"
+    label: "Kousaka_Umi"
   },
   {
-    label: "Sakuramori_Kaori",
+    detail: "ミリオンライブ！",
     description: "桜守歌織 (さくらもりかおり)",
-    detail: "ミリオンライブ！"
+    label: "Sakuramori_Kaori"
   },
   {
-    label: "Satake_Minako",
+    detail: "ミリオンライブ！",
     description: "佐竹美奈子 (さたけみなこ)",
-    detail: "ミリオンライブ！"
+    label: "Satake_Minako"
   },
   {
-    label: "Shinomiya_Karen",
+    detail: "ミリオンライブ！",
     description: "篠宮可憐 (しのみやかれん)",
-    detail: "ミリオンライブ！"
+    label: "Shinomiya_Karen"
   },
   {
-    label: "Shimabara_Elena",
+    detail: "ミリオンライブ！",
     description: "島原エレナ (しまばらえれな)",
-    detail: "ミリオンライブ！"
+    label: "Shimabara_Elena"
   },
   {
-    label: "Shiraishi_Tsumugi",
+    detail: "ミリオンライブ！",
     description: "白石紬 (しらいしつむぎ)",
-    detail: "ミリオンライブ！"
+    label: "Shiraishi_Tsumugi"
   },
   {
-    label: "Julia",
+    detail: "ミリオンライブ！",
     description: "ジュリア (じゅりあ)",
-    detail: "ミリオンライブ！"
+    label: "Julia"
   },
   {
-    label: "Suou_Momoko",
+    detail: "ミリオンライブ！",
     description: "周防桃子 (すおうももこ)",
-    detail: "ミリオンライブ！"
+    label: "Suou_Momoko"
   },
   {
-    label: "Takayama_Sayoko",
+    detail: "ミリオンライブ！",
     description: "高山紗代子 (たかやまさよこ)",
-    detail: "ミリオンライブ！"
+    label: "Takayama_Sayoko"
   },
   {
-    label: "Tanaka_Kotoha",
+    detail: "ミリオンライブ！",
     description: "田中琴葉 (たなかことは)",
-    detail: "ミリオンライブ！"
+    label: "Tanaka_Kotoha"
   },
   {
-    label: "Tenkubashi_Tomoka",
+    detail: "ミリオンライブ！",
     description: "天空橋朋花 (てんくうばしともか)",
-    detail: "ミリオンライブ！"
+    label: "Tenkubashi_Tomoka"
   },
   {
-    label: "Tokugawa_Matsuri",
+    detail: "ミリオンライブ！",
     description: "徳川まつり (とくがわまつり)",
-    detail: "ミリオンライブ！"
+    label: "Tokugawa_Matsuri"
   },
   {
-    label: "Tokoro_Megumi",
+    detail: "ミリオンライブ！",
     description: "所恵美 (ところめぐみ)",
-    detail: "ミリオンライブ！"
+    label: "Tokoro_Megumi"
   },
   {
-    label: "Toyokawa_Fuka",
+    detail: "ミリオンライブ！",
     description: "豊川風花 (とよかわふうか)",
-    detail: "ミリオンライブ！"
+    label: "Toyokawa_Fuka"
   },
   {
-    label: "Nakatani_Iku",
+    detail: "ミリオンライブ！",
     description: "中谷育 (なかたにいく)",
-    detail: "ミリオンライブ！"
+    label: "Nakatani_Iku"
   },
   {
-    label: "Nagayoshi_Subaru",
+    detail: "ミリオンライブ！",
     description: "永吉昴 (ながよしすばる)",
-    detail: "ミリオンライブ！"
+    label: "Nagayoshi_Subaru"
   },
   {
-    label: "Nanao_Yuriko",
+    detail: "ミリオンライブ！",
     description: "七尾百合子 (ななおゆりこ)",
-    detail: "ミリオンライブ！"
+    label: "Nanao_Yuriko"
   },
   {
-    label: "Nikaido_Chizuru",
+    detail: "ミリオンライブ！",
     description: "二階堂千鶴 (にかいどうちづる)",
-    detail: "ミリオンライブ！"
+    label: "Nikaido_Chizuru"
   },
   {
-    label: "Nonohara_Akane",
+    detail: "ミリオンライブ！",
     description: "野々原茜 (ののはらあかね)",
-    detail: "ミリオンライブ！"
+    label: "Nonohara_Akane"
   },
   {
-    label: "Hakozaki_Serika",
+    detail: "ミリオンライブ！",
     description: "箱崎星梨花 (はこざきせりか)",
-    detail: "ミリオンライブ！"
+    label: "Hakozaki_Serika"
   },
   {
-    label: "Baba_Konomi",
+    detail: "ミリオンライブ！",
     description: "馬場このみ (ばばこのみ)",
-    detail: "ミリオンライブ！"
+    label: "Baba_Konomi"
   },
   {
-    label: "Fukuda_Noriko",
+    detail: "ミリオンライブ！",
     description: "福田のり子 (ふくだのりこ)",
-    detail: "ミリオンライブ！"
+    label: "Fukuda_Noriko"
   },
   {
-    label: "Maihama_Ayumu",
+    detail: "ミリオンライブ！",
     description: "舞浜歩 (まいはまあゆむ)",
-    detail: "ミリオンライブ！"
+    label: "Maihama_Ayumu"
   },
   {
-    label: "Makabe_Mizuki",
+    detail: "ミリオンライブ！",
     description: "真壁瑞希 (まかべみずき)",
-    detail: "ミリオンライブ！"
+    label: "Makabe_Mizuki"
   },
   {
-    label: "Matsuda_Arisa",
+    detail: "ミリオンライブ！",
     description: "松田亜利沙 (まつだありさ)",
-    detail: "ミリオンライブ！"
+    label: "Matsuda_Arisa"
   },
   {
-    label: "Miyao_Miya",
+    detail: "ミリオンライブ！",
     description: "宮尾美也 (みやおみや)",
-    detail: "ミリオンライブ！"
+    label: "Miyao_Miya"
   },
   {
-    label: "Mogami_Shizuka",
+    detail: "ミリオンライブ！",
     description: "最上静香 (もがみしずか)",
-    detail: "ミリオンライブ！"
+    label: "Mogami_Shizuka"
   },
   {
-    label: "Mochizuki_Anna",
+    detail: "ミリオンライブ！",
     description: "望月杏奈 (もちづきあんな)",
-    detail: "ミリオンライブ！"
+    label: "Mochizuki_Anna"
   },
   {
-    label: "Momose_Rio",
+    detail: "ミリオンライブ！",
     description: "百瀬莉緒 (ももせりお)",
-    detail: "ミリオンライブ！"
+    label: "Momose_Rio"
   },
   {
-    label: "Yabuki_Kana",
+    detail: "ミリオンライブ！",
     description: "矢吹可奈 (やぶきかな)",
-    detail: "ミリオンライブ！"
+    label: "Yabuki_Kana"
   },
   {
-    label: "Yokoyama_Nao",
+    detail: "ミリオンライブ！",
     description: "横山奈緒 (よこやまなお)",
-    detail: "ミリオンライブ！"
+    label: "Yokoyama_Nao"
   },
   {
-    label: "Handa_Roco",
+    detail: "ミリオンライブ！",
     description: "ロコ (ろこ)",
-    detail: "ミリオンライブ！"
+    label: "Handa_Roco"
   },
   {
-    label: "Aikawa_Chinatsu",
+    detail: "シンデレラガールズ",
     description: "相川千夏 (あいかわちなつ)",
-    detail: "シンデレラガールズ"
+    label: "Aikawa_Chinatsu"
   },
   {
-    label: "Aino_Nagisa",
+    detail: "シンデレラガールズ",
     description: "愛野渚 (あいのなぎさ)",
-    detail: "シンデレラガールズ"
+    label: "Aino_Nagisa"
   },
   {
-    label: "Aihara_Yukino",
+    detail: "シンデレラガールズ",
     description: "相原雪乃 (あいはらゆきの)",
-    detail: "シンデレラガールズ"
+    label: "Aihara_Yukino"
   },
   {
-    label: "Aiba_Yumi",
+    detail: "シンデレラガールズ",
     description: "相葉夕美 (あいばゆみ)",
-    detail: "シンデレラガールズ"
+    label: "Aiba_Yumi"
   },
   {
-    label: "Akagi_Miria",
+    detail: "シンデレラガールズ",
     description: "赤城みりあ (あかぎみりあ)",
-    detail: "シンデレラガールズ"
+    label: "Akagi_Miria"
   },
   {
-    label: "Akanishi_Erika",
+    detail: "シンデレラガールズ",
     description: "赤西瑛梨華 (あかにしえりか)",
-    detail: "シンデレラガールズ"
+    label: "Akanishi_Erika"
   },
   {
-    label: "Asano_Fuka",
+    detail: "シンデレラガールズ",
     description: "浅野風香 (あさのふうか)",
-    detail: "シンデレラガールズ"
+    label: "Asano_Fuka"
   },
   {
-    label: "Asari_Nanami",
+    detail: "シンデレラガールズ",
     description: "浅利七海 (あさりななみ)",
-    detail: "シンデレラガールズ"
+    label: "Asari_Nanami"
   },
   {
-    label: "Anastasia",
+    detail: "シンデレラガールズ",
     description: "アナスタシア (あなすたしあ)",
-    detail: "シンデレラガールズ"
+    label: "Anastasia"
   },
   {
-    label: "Abe_Nana",
+    detail: "シンデレラガールズ",
     description: "安部菜々 (あべなな)",
-    detail: "シンデレラガールズ"
+    label: "Abe_Nana"
   },
   {
-    label: "Ayase_Honoka",
+    detail: "シンデレラガールズ",
     description: "綾瀬穂乃香 (あやせほのか)",
-    detail: "シンデレラガールズ"
+    label: "Ayase_Honoka"
   },
   {
-    label: "Araki_Hina",
+    detail: "シンデレラガールズ",
     description: "荒木比奈 (あらきひな)",
-    detail: "シンデレラガールズ"
+    label: "Araki_Hina"
   },
   {
-    label: "Ariura_Kanna",
+    detail: "シンデレラガールズ",
     description: "有浦柑奈 (ありうらかんな)",
-    detail: "シンデレラガールズ"
+    label: "Ariura_Kanna"
   },
   {
-    label: "Anzai_Miyako",
+    detail: "シンデレラガールズ",
     description: "安斎都 (あんざいみやこ)",
-    detail: "シンデレラガールズ"
+    label: "Anzai_Miyako"
   },
   {
-    label: "Igarashi_Kyoko",
+    detail: "シンデレラガールズ",
     description: "五十嵐響子 (いがらしきょうこ)",
-    detail: "シンデレラガールズ"
+    label: "Igarashi_Kyoko"
   },
   {
-    label: "Ikebukuro_Akiha",
+    detail: "シンデレラガールズ",
     description: "池袋晶葉 (いけぶくろあきは)",
-    detail: "シンデレラガールズ"
+    label: "Ikebukuro_Akiha"
   },
   {
-    label: "Ijuin_Megumi",
+    detail: "シンデレラガールズ",
     description: "伊集院惠 (いじゅういんめぐみ)",
-    detail: "シンデレラガールズ"
+    label: "Ijuin_Megumi"
   },
   {
-    label: "Ichinose_Shiki",
+    detail: "シンデレラガールズ",
     description: "一ノ瀬志希 (いちのせしき)",
-    detail: "シンデレラガールズ"
+    label: "Ichinose_Shiki"
   },
   {
-    label: "Ichihara_Nina",
+    detail: "シンデレラガールズ",
     description: "市原仁奈 (いちはらにな)",
-    detail: "シンデレラガールズ"
+    label: "Ichihara_Nina"
   },
   {
-    label: "Imai_Kana",
+    detail: "シンデレラガールズ",
     description: "今井加奈 (いまいかな)",
-    detail: "シンデレラガールズ"
+    label: "Imai_Kana"
   },
   {
-    label: "Imura_Setsuna",
+    detail: "シンデレラガールズ",
     description: "井村雪菜 (いむらせつな)",
-    detail: "シンデレラガールズ"
+    label: "Imura_Setsuna"
   },
   {
-    label: "Eve_Santaclaus",
+    detail: "シンデレラガールズ",
     description: "イヴ・サンタクロース (いゔさんたくろーす)",
-    detail: "シンデレラガールズ"
+    label: "Eve_Santaclaus"
   },
   {
-    label: "Ueda_Suzuho",
+    detail: "シンデレラガールズ",
     description: "上田鈴帆 (うえだすずほ)",
-    detail: "シンデレラガールズ"
+    label: "Ueda_Suzuho"
   },
   {
-    label: "Ujiie_Mutsumi",
+    detail: "シンデレラガールズ",
     description: "氏家むつみ (うじいえむつみ)",
-    detail: "シンデレラガールズ"
+    label: "Ujiie_Mutsumi"
   },
   {
-    label: "Umeki_Otoha",
+    detail: "シンデレラガールズ",
     description: "梅木音葉 (うめきおとは)",
-    detail: "シンデレラガールズ"
+    label: "Umeki_Otoha"
   },
   {
-    label: "Egami_Tsubaki",
+    detail: "シンデレラガールズ",
     description: "江上椿 (えがみつばき)",
-    detail: "シンデレラガールズ"
+    label: "Egami_Tsubaki"
   },
   {
-    label: "Etou_Misaki",
+    detail: "シンデレラガールズ",
     description: "衛藤美紗希 (えとうみさき)",
-    detail: "シンデレラガールズ"
+    label: "Etou_Misaki"
   },
   {
-    label: "Ebihara_Naho",
+    detail: "シンデレラガールズ",
     description: "海老原菜帆 (えびはらなほ)",
-    detail: "シンデレラガールズ"
+    label: "Ebihara_Naho"
   },
   {
-    label: "Oikawa_Shizuku",
+    detail: "シンデレラガールズ",
     description: "及川雫 (おいかわしずく)",
-    detail: "シンデレラガールズ"
+    label: "Oikawa_Shizuku"
   },
   {
-    label: "Ohishi_Izumi",
+    detail: "シンデレラガールズ",
     description: "大石泉 (おおいしいずみ)",
-    detail: "シンデレラガールズ"
+    label: "Ohishi_Izumi"
   },
   {
-    label: "Ohta_Yuu",
+    detail: "シンデレラガールズ",
     description: "太田優 (おおたゆう)",
-    detail: "シンデレラガールズ"
+    label: "Ohta_Yuu"
   },
   {
-    label: "Ohtsuki_Yui",
+    detail: "シンデレラガールズ",
     description: "大槻唯 (おおつきゆい)",
-    detail: "シンデレラガールズ"
+    label: "Ohtsuki_Yui"
   },
   {
-    label: "Ohnishi_Yuriko",
+    detail: "シンデレラガールズ",
     description: "大西由里子 (おおにしゆりこ)",
-    detail: "シンデレラガールズ"
+    label: "Ohnishi_Yuriko"
   },
   {
-    label: "Ohnuma_Kurumi",
+    detail: "シンデレラガールズ",
     description: "大沼くるみ (おおぬまくるみ)",
-    detail: "シンデレラガールズ"
+    label: "Ohnuma_Kurumi"
   },
   {
-    label: "Ohara_Michiru",
+    detail: "シンデレラガールズ",
     description: "大原みちる (おおはらみちる)",
-    detail: "シンデレラガールズ"
+    label: "Ohara_Michiru"
   },
   {
-    label: "Okazaki_Yasuha",
+    detail: "シンデレラガールズ",
     description: "岡崎泰葉 (おかざきやすは)",
-    detail: "シンデレラガールズ"
+    label: "Okazaki_Yasuha"
   },
   {
-    label: "Ogata_Chieri",
+    detail: "シンデレラガールズ",
     description: "緒方智絵里 (おがたちえり)",
-    detail: "シンデレラガールズ"
+    label: "Ogata_Chieri"
   },
   {
-    label: "Okuyama_Saori",
+    detail: "シンデレラガールズ",
     description: "奥山沙織 (おくやまさおり)",
-    detail: "シンデレラガールズ"
+    label: "Okuyama_Saori"
   },
   {
-    label: "Otokura_Yuuki",
+    detail: "シンデレラガールズ",
     description: "乙倉悠貴 (おとくらゆうき)",
-    detail: "シンデレラガールズ"
+    label: "Otokura_Yuuki"
   },
   {
-    label: "Katagiri_Sanae",
+    detail: "シンデレラガールズ",
     description: "片桐早苗 (かたぎりさなえ)",
-    detail: "シンデレラガールズ"
+    label: "Katagiri_Sanae"
   },
   {
-    label: "Kamijo_Haruna",
+    detail: "シンデレラガールズ",
     description: "上条春菜 (かみじょうはるな)",
-    detail: "シンデレラガールズ"
+    label: "Kamijo_Haruna"
   },
   {
-    label: "Kamiya_Nao",
+    detail: "シンデレラガールズ",
     description: "神谷奈緒 (かみやなお)",
-    detail: "シンデレラガールズ"
+    label: "Kamiya_Nao"
   },
   {
-    label: "Kawashima_Mizuki",
+    detail: "シンデレラガールズ",
     description: "川島瑞樹 (かわしまみずき)",
-    detail: "シンデレラガールズ"
+    label: "Kawashima_Mizuki"
   },
   {
-    label: "Kanzaki_Ranko",
+    detail: "シンデレラガールズ",
     description: "神崎蘭子 (かんざきらんこ)",
-    detail: "シンデレラガールズ"
+    label: "Kanzaki_Ranko"
   },
   {
-    label: "Kishibe_Ayaka",
+    detail: "シンデレラガールズ",
     description: "岸部彩華 (きしべあやか)",
-    detail: "シンデレラガールズ"
+    label: "Kishibe_Ayaka"
   },
   {
-    label: "Kitagawa_Mahiro",
+    detail: "シンデレラガールズ",
     description: "北川真尋 (きたがわまひろ)",
-    detail: "シンデレラガールズ"
+    label: "Kitagawa_Mahiro"
   },
   {
-    label: "Kita_Hinako",
+    detail: "シンデレラガールズ",
     description: "喜多日菜子 (きたひなこ)",
-    detail: "シンデレラガールズ"
+    label: "Kita_Hinako"
   },
   {
-    label: "Kitami_Yuzu",
+    detail: "シンデレラガールズ",
     description: "喜多見柚 (きたみゆず)",
-    detail: "シンデレラガールズ"
+    label: "Kitami_Yuzu"
   },
   {
-    label: "Kiba_Manami",
+    detail: "シンデレラガールズ",
     description: "木場真奈美 (きばまなみ)",
-    detail: "シンデレラガールズ"
+    label: "Kiba_Manami"
   },
   {
-    label: "Kimura_Natsuki",
+    detail: "シンデレラガールズ",
     description: "木村夏樹 (きむらなつき)",
-    detail: "シンデレラガールズ"
+    label: "Kimura_Natsuki"
   },
   {
-    label: "Cathy_Graham",
+    detail: "シンデレラガールズ",
     description: "キャシー・グラハム (きゃしーぐらはむ)",
-    detail: "シンデレラガールズ"
+    label: "Cathy_Graham"
   },
   {
-    label: "Kirino_Aya",
+    detail: "シンデレラガールズ",
     description: "桐野アヤ (きりのあや)",
-    detail: "シンデレラガールズ"
+    label: "Kirino_Aya"
   },
   {
-    label: "Kiryu_Tsukasa",
+    detail: "シンデレラガールズ",
     description: "桐生つかさ (きりゅうつかさ)",
-    detail: "シンデレラガールズ"
+    label: "Kiryu_Tsukasa"
   },
   {
-    label: "Kusakabe_Wakaba",
+    detail: "シンデレラガールズ",
     description: "日下部若葉 (くさかべわかば)",
-    detail: "シンデレラガールズ"
+    label: "Kusakabe_Wakaba"
   },
   {
-    label: "Kudo_Shinobu",
+    detail: "シンデレラガールズ",
     description: "工藤忍 (くどうしのぶ)",
-    detail: "シンデレラガールズ"
+    label: "Kudo_Shinobu"
   },
   {
-    label: "Clarice",
+    detail: "シンデレラガールズ",
     description: "クラリス (くらりす)",
-    detail: "シンデレラガールズ"
+    label: "Clarice"
   },
   {
-    label: "Kurihara_Nene",
+    detail: "シンデレラガールズ",
     description: "栗原ネネ (くりはらねね)",
-    detail: "シンデレラガールズ"
+    label: "Kurihara_Nene"
   },
   {
-    label: "Kurokawa_Chiaki",
+    detail: "シンデレラガールズ",
     description: "黒川千秋 (くろかわちあき)",
-    detail: "シンデレラガールズ"
+    label: "Kurokawa_Chiaki"
   },
   {
-    label: "Kurosaki_Chitose",
+    detail: "シンデレラガールズ",
     description: "黒埼ちとせ (くろさきちとせ)",
-    detail: "シンデレラガールズ"
+    label: "Kurosaki_Chitose"
   },
   {
-    label: "Kate",
+    detail: "シンデレラガールズ",
     description: "ケイト (けいと)",
-    detail: "シンデレラガールズ"
+    label: "Kate"
   },
   {
-    label: "Koga_Koharu",
+    detail: "シンデレラガールズ",
     description: "古賀小春 (こがこはる)",
-    detail: "シンデレラガールズ"
+    label: "Koga_Koharu"
   },
   {
-    label: "Koshimizu_Sachiko",
+    detail: "シンデレラガールズ",
     description: "輿水幸子 (こしみずさちこ)",
-    detail: "シンデレラガールズ"
+    label: "Koshimizu_Sachiko"
   },
   {
-    label: "Koseki_Reina",
+    detail: "シンデレラガールズ",
     description: "小関麗奈 (こせきれいな)",
-    detail: "シンデレラガールズ"
+    label: "Koseki_Reina"
   },
   {
-    label: "Kobayakawa_Sae",
+    detail: "シンデレラガールズ",
     description: "小早川紗枝 (こばやかわさえ)",
-    detail: "シンデレラガールズ"
+    label: "Kobayakawa_Sae"
   },
   {
-    label: "Kohinata_Miho",
+    detail: "シンデレラガールズ",
     description: "小日向美穂 (こひなたみほ)",
-    detail: "シンデレラガールズ"
+    label: "Kohinata_Miho"
   },
   {
-    label: "Komatsu_Ibuki",
+    detail: "シンデレラガールズ",
     description: "小松伊吹 (こまついぶき)",
-    detail: "シンデレラガールズ"
+    label: "Komatsu_Ibuki"
   },
   {
-    label: "Komuro_Chinami",
+    detail: "シンデレラガールズ",
     description: "小室千奈美 (こむろちなみ)",
-    detail: "シンデレラガールズ"
+    label: "Komuro_Chinami"
   },
   {
-    label: "Saionji_Kotoka",
+    detail: "シンデレラガールズ",
     description: "西園寺琴歌 (さいおんじことか)",
-    detail: "シンデレラガールズ"
+    label: "Saionji_Kotoka"
   },
   {
-    label: "Saito_Yoko",
+    detail: "シンデレラガールズ",
     description: "斉藤洋子 (さいとうようこ)",
-    detail: "シンデレラガールズ"
+    label: "Saito_Yoko"
   },
   {
-    label: "Saejima_Kiyomi",
+    detail: "シンデレラガールズ",
     description: "冴島清美 (さえじまきよみ)",
-    detail: "シンデレラガールズ"
+    label: "Saejima_Kiyomi"
   },
   {
-    label: "Sakakibara_Satomi",
+    detail: "シンデレラガールズ",
     description: "榊原里美 (さかきばらさとみ)",
-    detail: "シンデレラガールズ"
+    label: "Sakakibara_Satomi"
   },
   {
-    label: "Sagisawa_Fumika",
+    detail: "シンデレラガールズ",
     description: "鷺沢文香 (さぎさわふみか)",
-    detail: "シンデレラガールズ"
+    label: "Sagisawa_Fumika"
   },
   {
-    label: "Sakuma_Mayu",
+    detail: "シンデレラガールズ",
     description: "佐久間まゆ (さくままゆ)",
-    detail: "シンデレラガールズ"
+    label: "Sakuma_Mayu"
   },
   {
-    label: "Sakurai_Momoka",
+    detail: "シンデレラガールズ",
     description: "櫻井桃華 (さくらいももか)",
-    detail: "シンデレラガールズ"
+    label: "Sakurai_Momoka"
   },
   {
-    label: "Sasaki_Chie",
+    detail: "シンデレラガールズ",
     description: "佐々木千枝 (ささきちえ)",
-    detail: "シンデレラガールズ"
+    label: "Sasaki_Chie"
   },
   {
-    label: "Sajo_Yukimi",
+    detail: "シンデレラガールズ",
     description: "佐城雪美 (さじょうゆきみ)",
-    detail: "シンデレラガールズ"
+    label: "Sajo_Yukimi"
   },
   {
-    label: "Sato_Shin",
+    detail: "シンデレラガールズ",
     description: "佐藤心 (さとうしん)",
-    detail: "シンデレラガールズ"
+    label: "Sato_Shin"
   },
   {
-    label: "Sawada_Marina",
+    detail: "シンデレラガールズ",
     description: "沢田麻理菜 (さわだまりな)",
-    detail: "シンデレラガールズ"
+    label: "Sawada_Marina"
   },
   {
-    label: "Zaizen_Tokiko",
+    detail: "シンデレラガールズ",
     description: "財前時子 (ざいぜんときこ)",
-    detail: "シンデレラガールズ"
+    label: "Zaizen_Tokiko"
   },
   {
-    label: "Shiina_Noriko",
+    detail: "シンデレラガールズ",
     description: "椎名法子 (しいなのりこ)",
-    detail: "シンデレラガールズ"
+    label: "Shiina_Noriko"
   },
   {
-    label: "Shiomi_Syuko",
+    detail: "シンデレラガールズ",
     description: "塩見周子 (しおみしゅうこ)",
-    detail: "シンデレラガールズ"
+    label: "Shiomi_Syuko"
   },
   {
-    label: "Shinohara_Rei",
+    detail: "シンデレラガールズ",
     description: "篠原礼 (しのはられい)",
-    detail: "シンデレラガールズ"
+    label: "Shinohara_Rei"
   },
   {
-    label: "Shibuya_Rin",
+    detail: "シンデレラガールズ",
     description: "渋谷凛 (しぶやりん)",
-    detail: "シンデレラガールズ"
+    label: "Shibuya_Rin"
   },
   {
-    label: "Shimamura_Uzuki",
+    detail: "シンデレラガールズ",
     description: "島村卯月 (しまむらうづき)",
-    detail: "シンデレラガールズ"
+    label: "Shimamura_Uzuki"
   },
   {
-    label: "Shuto_Aoi",
+    detail: "シンデレラガールズ",
     description: "首藤葵 (しゅとうあおい)",
-    detail: "シンデレラガールズ"
+    label: "Shuto_Aoi"
   },
   {
-    label: "Shiragiku_Hotaru",
+    detail: "シンデレラガールズ",
     description: "白菊ほたる (しらぎくほたる)",
-    detail: "シンデレラガールズ"
+    label: "Shiragiku_Hotaru"
   },
   {
-    label: "Shirasaka_Koume",
+    detail: "シンデレラガールズ",
     description: "白坂小梅 (しらさかこうめ)",
-    detail: "シンデレラガールズ"
+    label: "Shirasaka_Koume"
   },
   {
-    label: "Shirayuki_Chiyo",
+    detail: "シンデレラガールズ",
     description: "白雪千夜 (しらゆきちよ)",
-    detail: "シンデレラガールズ"
+    label: "Shirayuki_Chiyo"
   },
   {
-    label: "Jougasaki_Mika",
+    detail: "シンデレラガールズ",
     description: "城ヶ崎美嘉 (じょうがさきみか)",
-    detail: "シンデレラガールズ"
+    label: "Jougasaki_Mika"
   },
   {
-    label: "Jougasaki_Rika",
+    detail: "シンデレラガールズ",
     description: "城ヶ崎莉嘉 (じょうがさきりか)",
-    detail: "シンデレラガールズ"
+    label: "Jougasaki_Rika"
   },
   {
-    label: "Sugisaka_Umi",
+    detail: "シンデレラガールズ",
     description: "杉坂海 (すぎさかうみ)",
-    detail: "シンデレラガールズ"
+    label: "Sugisaka_Umi"
   },
   {
-    label: "Suzumiya_Seika",
+    detail: "シンデレラガールズ",
     description: "涼宮星花 (すずみやせいか)",
-    detail: "シンデレラガールズ"
+    label: "Suzumiya_Seika"
   },
   {
-    label: "Sunazuka_Akira",
+    detail: "シンデレラガールズ",
     description: "砂塚あきら (すなづかあきら)",
-    detail: "シンデレラガールズ"
+    label: "Sunazuka_Akira"
   },
   {
-    label: "Seki_Hiromi",
+    detail: "シンデレラガールズ",
     description: "関裕美 (せきひろみ)",
-    detail: "シンデレラガールズ"
+    label: "Seki_Hiromi"
   },
   {
-    label: "Sena_Shiori",
+    detail: "シンデレラガールズ",
     description: "瀬名詩織 (せなしおり)",
-    detail: "シンデレラガールズ"
+    label: "Sena_Shiori"
   },
   {
-    label: "Senzaki_Ema",
+    detail: "シンデレラガールズ",
     description: "仙崎恵磨 (せんざきえま)",
-    detail: "シンデレラガールズ"
+    label: "Senzaki_Ema"
   },
   {
-    label: "Souma_Natsumi",
+    detail: "シンデレラガールズ",
     description: "相馬夏美 (そうまなつみ)",
-    detail: "シンデレラガールズ"
+    label: "Souma_Natsumi"
   },
   {
-    label: "Takagaki_Kaede",
+    detail: "シンデレラガールズ",
     description: "高垣楓 (たかがきかえで)",
-    detail: "シンデレラガールズ"
+    label: "Takagaki_Kaede"
   },
   {
-    label: "Takahashi_Reiko",
+    detail: "シンデレラガールズ",
     description: "高橋礼子 (たかはしれいこ)",
-    detail: "シンデレラガールズ"
+    label: "Takahashi_Reiko"
   },
   {
-    label: "Takafuji_Kako",
+    detail: "シンデレラガールズ",
     description: "鷹富士茄子 (たかふじかこ)",
-    detail: "シンデレラガールズ"
+    label: "Takafuji_Kako"
   },
   {
-    label: "Takamine_Noa",
+    detail: "シンデレラガールズ",
     description: "高峯のあ (たかみねのあ)",
-    detail: "シンデレラガールズ"
+    label: "Takamine_Noa"
   },
   {
-    label: "Takamori_Aiko",
+    detail: "シンデレラガールズ",
     description: "高森藍子 (たかもりあいこ)",
-    detail: "シンデレラガールズ"
+    label: "Takamori_Aiko"
   },
   {
-    label: "Tada_Riina",
+    detail: "シンデレラガールズ",
     description: "多田李衣菜 (ただりいな)",
-    detail: "シンデレラガールズ"
+    label: "Tada_Riina"
   },
   {
-    label: "Tachibana_Arisu",
+    detail: "シンデレラガールズ",
     description: "橘ありす (たちばなありす)",
-    detail: "シンデレラガールズ"
+    label: "Tachibana_Arisu"
   },
   {
-    label: "Tsukimiya_Miyabi",
+    detail: "シンデレラガールズ",
     description: "月宮雅 (つきみやみやび)",
-    detail: "シンデレラガールズ"
+    label: "Tsukimiya_Miyabi"
   },
   {
-    label: "Tsujino_Akari",
+    detail: "シンデレラガールズ",
     description: "辻野あかり (つじのあかり)",
-    detail: "シンデレラガールズ"
+    label: "Tsujino_Akari"
   },
   {
-    label: "Tsuchiya_Ako",
+    detail: "シンデレラガールズ",
     description: "土屋亜子 (つちやあこ)",
-    detail: "シンデレラガールズ"
+    label: "Tsuchiya_Ako"
   },
   {
-    label: "Togo_Ai",
+    detail: "シンデレラガールズ",
     description: "東郷あい (とうごうあい)",
-    detail: "シンデレラガールズ"
+    label: "Togo_Ai"
   },
   {
-    label: "Totoki_Airi",
+    detail: "シンデレラガールズ",
     description: "十時愛梨 (とときあいり)",
-    detail: "シンデレラガールズ"
+    label: "Totoki_Airi"
   },
   {
-    label: "Domyoji_Karin",
+    detail: "シンデレラガールズ",
     description: "道明寺歌鈴 (どうみょうじかりん)",
-    detail: "シンデレラガールズ"
+    label: "Domyoji_Karin"
   },
   {
-    label: "Nakano_Yuka",
+    detail: "シンデレラガールズ",
     description: "中野有香 (なかのゆか)",
-    detail: "シンデレラガールズ"
+    label: "Nakano_Yuka"
   },
   {
-    label: "Nagatomi_Hasumi",
+    detail: "シンデレラガールズ",
     description: "長富蓮実 (ながとみはすみ)",
-    detail: "シンデレラガールズ"
+    label: "Nagatomi_Hasumi"
   },
   {
-    label: "Natalia",
+    detail: "シンデレラガールズ",
     description: "ナターリア (なたーりあ)",
-    detail: "シンデレラガールズ"
+    label: "Natalia"
   },
   {
-    label: "Namiki_Meiko",
+    detail: "シンデレラガールズ",
     description: "並木芽衣子 (なみきめいこ)",
-    detail: "シンデレラガールズ"
+    label: "Namiki_Meiko"
   },
   {
-    label: "Narumiya_Yume",
+    detail: "シンデレラガールズ",
     description: "成宮由愛 (なるみやゆめ)",
-    detail: "シンデレラガールズ"
+    label: "Narumiya_Yume"
   },
   {
-    label: "Nanjo_Hikaru",
+    detail: "シンデレラガールズ",
     description: "南条光 (なんじょうひかる)",
-    detail: "シンデレラガールズ"
+    label: "Nanjo_Hikaru"
   },
   {
-    label: "Namba_Emi",
+    detail: "シンデレラガールズ",
     description: "難波笑美 (なんばえみ)",
-    detail: "シンデレラガールズ"
+    label: "Namba_Emi"
   },
   {
-    label: "Nishikawa_Honami",
+    detail: "シンデレラガールズ",
     description: "西川保奈美 (にしかわほなみ)",
-    detail: "シンデレラガールズ"
+    label: "Nishikawa_Honami"
   },
   {
-    label: "Nishijima_Kai",
+    detail: "シンデレラガールズ",
     description: "西島櫂 (にしじまかい)",
-    detail: "シンデレラガールズ"
+    label: "Nishijima_Kai"
   },
   {
-    label: "Nitta_Minami",
+    detail: "シンデレラガールズ",
     description: "新田美波 (にったみなみ)",
-    detail: "シンデレラガールズ"
+    label: "Nitta_Minami"
   },
   {
-    label: "Ninomiya_Asuka",
+    detail: "シンデレラガールズ",
     description: "二宮飛鳥 (にのみやあすか)",
-    detail: "シンデレラガールズ"
+    label: "Ninomiya_Asuka"
   },
   {
-    label: "Niwa_Hitomi",
+    detail: "シンデレラガールズ",
     description: "丹羽仁美 (にわひとみ)",
-    detail: "シンデレラガールズ"
+    label: "Niwa_Hitomi"
   },
   {
-    label: "Nonomura_Sora",
+    detail: "シンデレラガールズ",
     description: "野々村そら (ののむらそら)",
-    detail: "シンデレラガールズ"
+    label: "Nonomura_Sora"
   },
   {
-    label: "Hattori_Toko",
+    detail: "シンデレラガールズ",
     description: "服部瞳子 (はっとりとうこ)",
-    detail: "シンデレラガールズ"
+    label: "Hattori_Toko"
   },
   {
-    label: "Hamakawa_Ayuna",
+    detail: "シンデレラガールズ",
     description: "浜川愛結奈 (はまかわあゆな)",
-    detail: "シンデレラガールズ"
+    label: "Hamakawa_Ayuna"
   },
   {
-    label: "Hamaguchi_Ayame",
+    detail: "シンデレラガールズ",
     description: "浜口あやめ (はまぐちあやめ)",
-    detail: "シンデレラガールズ"
+    label: "Hamaguchi_Ayame"
   },
   {
-    label: "Hayasaka_Mirei",
+    detail: "シンデレラガールズ",
     description: "早坂美玲 (はやさかみれい)",
-    detail: "シンデレラガールズ"
+    label: "Hayasaka_Mirei"
   },
   {
-    label: "Hayami_Kanade",
+    detail: "シンデレラガールズ",
     description: "速水奏 (はやみかなで)",
-    detail: "シンデレラガールズ"
+    label: "Hayami_Kanade"
   },
   {
-    label: "Harada_Miyo",
+    detail: "シンデレラガールズ",
     description: "原田美世 (はらだみよ)",
-    detail: "シンデレラガールズ"
+    label: "Harada_Miyo"
   },
   {
-    label: "Hiiragi_Shino",
+    detail: "シンデレラガールズ",
     description: "柊志乃 (ひいらぎしの)",
-    detail: "シンデレラガールズ"
+    label: "Hiiragi_Shino"
   },
   {
-    label: "Hisakawa_Nagi",
+    detail: "シンデレラガールズ",
     description: "久川凪 (ひさかわなぎ)",
-    detail: "シンデレラガールズ"
+    label: "Hisakawa_Nagi"
   },
   {
-    label: "Hisakawa_Hayate",
+    detail: "シンデレラガールズ",
     description: "久川颯 (ひさかわはやて)",
-    detail: "シンデレラガールズ"
+    label: "Hisakawa_Hayate"
   },
   {
-    label: "Hino_Akane",
+    detail: "シンデレラガールズ",
     description: "日野茜 (ひのあかね)",
-    detail: "シンデレラガールズ"
+    label: "Hino_Akane"
   },
   {
-    label: "Himekawa_Yuki",
+    detail: "シンデレラガールズ",
     description: "姫川友紀 (ひめかわゆき)",
-    detail: "シンデレラガールズ"
+    label: "Himekawa_Yuki"
   },
   {
-    label: "Hyodo_Rena",
+    detail: "シンデレラガールズ",
     description: "兵藤レナ (ひょうどうれな)",
-    detail: "シンデレラガールズ"
+    label: "Hyodo_Rena"
   },
   {
-    label: "Fukuyama_Mai",
+    detail: "シンデレラガールズ",
     description: "福山舞 (ふくやままい)",
-    detail: "シンデレラガールズ"
+    label: "Fukuyama_Mai"
   },
   {
-    label: "Fujii_Tomo",
+    detail: "シンデレラガールズ",
     description: "藤居朋 (ふじいとも)",
-    detail: "シンデレラガールズ"
+    label: "Fujii_Tomo"
   },
   {
-    label: "Fujimoto_Rina",
+    detail: "シンデレラガールズ",
     description: "藤本里奈 (ふじもとりな)",
-    detail: "シンデレラガールズ"
+    label: "Fujimoto_Rina"
   },
   {
-    label: "Fujiwara_Hajime",
+    detail: "シンデレラガールズ",
     description: "藤原肇 (ふじわらはじめ)",
-    detail: "シンデレラガールズ"
+    label: "Fujiwara_Hajime"
   },
   {
-    label: "Futaba_Anzu",
+    detail: "シンデレラガールズ",
     description: "双葉杏 (ふたばあんず)",
-    detail: "シンデレラガールズ"
+    label: "Futaba_Anzu"
   },
   {
-    label: "Furusawa_Yoriko",
+    detail: "シンデレラガールズ",
     description: "古澤頼子 (ふるさわよりこ)",
-    detail: "シンデレラガールズ"
+    label: "Furusawa_Yoriko"
   },
   {
-    label: "Helen",
+    detail: "シンデレラガールズ",
     description: "ヘレン (へれん)",
-    detail: "シンデレラガールズ"
+    label: "Helen"
   },
   {
-    label: "Hojo_Karen",
+    detail: "シンデレラガールズ",
     description: "北条加蓮 (ほうじょうかれん)",
-    detail: "シンデレラガールズ"
+    label: "Hojo_Karen"
   },
   {
-    label: "Hoshi_Syoko",
+    detail: "シンデレラガールズ",
     description: "星輝子 (ほししょうこ)",
-    detail: "シンデレラガールズ"
+    label: "Hoshi_Syoko"
   },
   {
-    label: "Hori_Yuko",
+    detail: "シンデレラガールズ",
     description: "堀裕子 (ほりゆうこ)",
-    detail: "シンデレラガールズ"
+    label: "Hori_Yuko"
   },
   {
-    label: "Honda_Mio",
+    detail: "シンデレラガールズ",
     description: "本田未央 (ほんだみお)",
-    detail: "シンデレラガールズ"
+    label: "Honda_Mio"
   },
   {
-    label: "Maekawa_Miku",
+    detail: "シンデレラガールズ",
     description: "前川みく (まえかわみく)",
-    detail: "シンデレラガールズ"
+    label: "Maekawa_Miku"
   },
   {
-    label: "Makihara_Shiho",
+    detail: "シンデレラガールズ",
     description: "槙原志保 (まきはらしほ)",
-    detail: "シンデレラガールズ"
+    label: "Makihara_Shiho"
   },
   {
-    label: "Matsuo_Chizuru",
+    detail: "シンデレラガールズ",
     description: "松尾千鶴 (まつおちづる)",
-    detail: "シンデレラガールズ"
+    label: "Matsuo_Chizuru"
   },
   {
-    label: "Matsunaga_Ryo",
+    detail: "シンデレラガールズ",
     description: "松永涼 (まつながりょう)",
-    detail: "シンデレラガールズ"
+    label: "Matsunaga_Ryo"
   },
   {
-    label: "Matsubara_Saya",
+    detail: "シンデレラガールズ",
     description: "松原早耶 (まつばらさや)",
-    detail: "シンデレラガールズ"
+    label: "Matsubara_Saya"
   },
   {
-    label: "Matsumoto_Sarina",
+    detail: "シンデレラガールズ",
     description: "松本沙理奈 (まつもとさりな)",
-    detail: "シンデレラガールズ"
+    label: "Matsumoto_Sarina"
   },
   {
-    label: "Matsuyama_Kumiko",
+    detail: "シンデレラガールズ",
     description: "松山久美子 (まつやまくみこ)",
-    detail: "シンデレラガールズ"
+    label: "Matsuyama_Kumiko"
   },
   {
-    label: "Matoba_Risa",
+    detail: "シンデレラガールズ",
     description: "的場梨沙 (まとばりさ)",
-    detail: "シンデレラガールズ"
+    label: "Matoba_Risa"
   },
   {
-    label: "Manaka_Misato",
+    detail: "シンデレラガールズ",
     description: "間中美里 (まなかみさと)",
-    detail: "シンデレラガールズ"
+    label: "Manaka_Misato"
   },
   {
-    label: "Manabe_Itsuki",
+    detail: "シンデレラガールズ",
     description: "真鍋いつき (まなべいつき)",
-    detail: "シンデレラガールズ"
+    label: "Manabe_Itsuki"
   },
   {
-    label: "Mizuki_Seira",
+    detail: "シンデレラガールズ",
     description: "水木聖來 (みずきせいら)",
-    detail: "シンデレラガールズ"
+    label: "Mizuki_Seira"
   },
   {
-    label: "Mizuno_Midori",
+    detail: "シンデレラガールズ",
     description: "水野翠 (みずのみどり)",
-    detail: "シンデレラガールズ"
+    label: "Mizuno_Midori"
   },
   {
-    label: "Mizumoto_Yukari",
+    detail: "シンデレラガールズ",
     description: "水本ゆかり (みずもとゆかり)",
-    detail: "シンデレラガールズ"
+    label: "Mizumoto_Yukari"
   },
   {
-    label: "Mifune_Miyu",
+    detail: "シンデレラガールズ",
     description: "三船美優 (みふねみゆ)",
-    detail: "シンデレラガールズ"
+    label: "Mifune_Miyu"
   },
   {
-    label: "Mimura_Kanako",
+    detail: "シンデレラガールズ",
     description: "三村かな子 (みむらかなこ)",
-    detail: "シンデレラガールズ"
+    label: "Mimura_Kanako"
   },
   {
-    label: "Miyamoto_Frederica",
+    detail: "シンデレラガールズ",
     description: "宮本フレデリカ (みやもとふれでりか)",
-    detail: "シンデレラガールズ"
+    label: "Miyamoto_Frederica"
   },
   {
-    label: "Miyoshi_Sana",
+    detail: "シンデレラガールズ",
     description: "三好紗南 (みよしさな)",
-    detail: "シンデレラガールズ"
+    label: "Miyoshi_Sana"
   },
   {
-    label: "Mukai_Takumi",
+    detail: "シンデレラガールズ",
     description: "向井拓海 (むかいたくみ)",
-    detail: "シンデレラガールズ"
+    label: "Mukai_Takumi"
   },
   {
-    label: "Munakata_Atsumi",
+    detail: "シンデレラガールズ",
     description: "棟方愛海 (むなかたあつみ)",
-    detail: "シンデレラガールズ"
+    label: "Munakata_Atsumi"
   },
   {
-    label: "Murakami_Tomoe",
+    detail: "シンデレラガールズ",
     description: "村上巴 (むらかみともえ)",
-    detail: "シンデレラガールズ"
+    label: "Murakami_Tomoe"
   },
   {
-    label: "Muramatsu_Sakura",
+    detail: "シンデレラガールズ",
     description: "村松さくら (むらまつさくら)",
-    detail: "シンデレラガールズ"
+    label: "Muramatsu_Sakura"
   },
   {
-    label: "Mary_Cochran",
+    detail: "シンデレラガールズ",
     description: "メアリー・コクラン (めありーこくらん)",
-    detail: "シンデレラガールズ"
+    label: "Mary_Cochran"
   },
   {
-    label: "Mochida_Arisa",
+    detail: "シンデレラガールズ",
     description: "持田亜里沙 (もちだありさ)",
-    detail: "シンデレラガールズ"
+    label: "Mochida_Arisa"
   },
   {
-    label: "Mochizuki_Hijiri",
+    detail: "シンデレラガールズ",
     description: "望月聖 (もちづきひじり)",
-    detail: "シンデレラガールズ"
+    label: "Mochizuki_Hijiri"
   },
   {
-    label: "Momoi_Azuki",
+    detail: "シンデレラガールズ",
     description: "桃井あずき (ももいあずき)",
-    detail: "シンデレラガールズ"
+    label: "Momoi_Azuki"
   },
   {
-    label: "Morikubo_Nono",
+    detail: "シンデレラガールズ",
     description: "森久保乃々 (もりくぼのの)",
-    detail: "シンデレラガールズ"
+    label: "Morikubo_Nono"
   },
   {
-    label: "Moroboshi_Kirari",
+    detail: "シンデレラガールズ",
     description: "諸星きらり (もろぼしきらり)",
-    detail: "シンデレラガールズ"
+    label: "Moroboshi_Kirari"
   },
   {
-    label: "Yao_Fueifuei",
+    detail: "シンデレラガールズ",
     description: "楊菲菲 (やおふぇいふぇい)",
-    detail: "シンデレラガールズ"
+    label: "Yao_Fueifuei"
   },
   {
-    label: "Yagami_Makino",
+    detail: "シンデレラガールズ",
     description: "八神マキノ (やがみまきの)",
-    detail: "シンデレラガールズ"
+    label: "Yagami_Makino"
   },
   {
-    label: "Yaguchi_Miu",
+    detail: "シンデレラガールズ",
     description: "矢口美羽 (やぐちみう)",
-    detail: "シンデレラガールズ"
+    label: "Yaguchi_Miu"
   },
   {
-    label: "Yanagi_Kiyora",
+    detail: "シンデレラガールズ",
     description: "柳清良 (やなぎきよら)",
-    detail: "シンデレラガールズ"
+    label: "Yanagi_Kiyora"
   },
   {
-    label: "Yanase_Miyuki",
+    detail: "シンデレラガールズ",
     description: "柳瀬美由紀 (やなせみゆき)",
-    detail: "シンデレラガールズ"
+    label: "Yanase_Miyuki"
   },
   {
-    label: "Yamato_Aki",
+    detail: "シンデレラガールズ",
     description: "大和亜季 (やまとあき)",
-    detail: "シンデレラガールズ"
+    label: "Yamato_Aki"
   },
   {
-    label: "Yuuki_Haru",
+    detail: "シンデレラガールズ",
     description: "結城晴 (ゆうきはる)",
-    detail: "シンデレラガールズ"
+    label: "Yuuki_Haru"
   },
   {
-    label: "Yusa_Kozue",
+    detail: "シンデレラガールズ",
     description: "遊佐こずえ (ゆさこずえ)",
-    detail: "シンデレラガールズ"
+    label: "Yusa_Kozue"
   },
   {
-    label: "Yumemi_Riamu",
+    detail: "シンデレラガールズ",
     description: "夢見りあむ (ゆめみりあむ)",
-    detail: "シンデレラガールズ"
+    label: "Yumemi_Riamu"
   },
   {
-    label: "Yokoyama_Chika",
+    detail: "シンデレラガールズ",
     description: "横山千佳 (よこやまちか)",
-    detail: "シンデレラガールズ"
+    label: "Yokoyama_Chika"
   },
   {
-    label: "Yoshioka_Saki",
+    detail: "シンデレラガールズ",
     description: "吉岡沙紀 (よしおかさき)",
-    detail: "シンデレラガールズ"
+    label: "Yoshioka_Saki"
   },
   {
-    label: "Yorita_Yoshino",
+    detail: "シンデレラガールズ",
     description: "依田芳乃 (よりたよしの)",
-    detail: "シンデレラガールズ"
+    label: "Yorita_Yoshino"
   },
   {
-    label: "Layla",
+    detail: "シンデレラガールズ",
     description: "ライラ (らいら)",
-    detail: "シンデレラガールズ"
+    label: "Layla"
   },
   {
-    label: "Ryuzaki_Kaoru",
+    detail: "シンデレラガールズ",
     description: "龍崎薫 (りゅうざきかおる)",
-    detail: "シンデレラガールズ"
+    label: "Ryuzaki_Kaoru"
   },
   {
-    label: "Wakabayashi_Tomoka",
+    detail: "シンデレラガールズ",
     description: "若林智香 (わかばやしともか)",
-    detail: "シンデレラガールズ"
+    label: "Wakabayashi_Tomoka"
   },
   {
-    label: "Wakiyama_Tamami",
+    detail: "シンデレラガールズ",
     description: "脇山珠美 (わきやまたまみ)",
-    detail: "シンデレラガールズ"
+    label: "Wakiyama_Tamami"
   },
   {
-    label: "Wakui_Rumi",
+    detail: "シンデレラガールズ",
     description: "和久井留美 (わくいるみ)",
-    detail: "シンデレラガールズ"
+    label: "Wakui_Rumi"
   },
   {
-    label: "Mitarai_Shota",
+    detail: "SideM / Jupiter（じゅぴたー）",
     description: "御手洗翔太 (みたらいしょうた)",
-    detail: "SideM / Jupiter（じゅぴたー）"
+    label: "Mitarai_Shota"
   },
   {
-    label: "Amagase_Toma",
+    detail: "SideM / Jupiter（じゅぴたー）",
     description: "天ヶ瀬冬馬 (あまがせとうま)",
-    detail: "SideM / Jupiter（じゅぴたー）"
+    label: "Amagase_Toma"
   },
   {
-    label: "Ijuin_Hokuto",
+    detail: "SideM / Jupiter（じゅぴたー）",
     description: "伊集院北斗 (いじゅういんほくと)",
-    detail: "SideM / Jupiter（じゅぴたー）"
+    label: "Ijuin_Hokuto"
   },
   {
-    label: "Sakuraba_Kaoru",
+    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）",
     description: "桜庭薫 (さくらばかおる)",
-    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）"
+    label: "Sakuraba_Kaoru"
   },
   {
-    label: "Tendo_Teru",
+    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）",
     description: "天道輝 (てんどうてる)",
-    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）"
+    label: "Tendo_Teru"
   },
   {
-    label: "Kashiwagi_Tsubasa",
+    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）",
     description: "柏木翼 (かしわぎつばさ)",
-    detail: "SideM / DRAMATIC STARS（どらまちっくすたーず）"
+    label: "Kashiwagi_Tsubasa"
   },
   {
-    label: "Tsuzuki_Kei",
+    detail: "SideM / Altessimo（あるてっしも）",
     description: "都築圭 (つづきけい)",
-    detail: "SideM / Altessimo（あるてっしも）"
+    label: "Tsuzuki_Kei"
   },
   {
-    label: "Kagura_Rei",
+    detail: "SideM / Altessimo（あるてっしも）",
     description: "神楽麗 (かぐられい)",
-    detail: "SideM / Altessimo（あるてっしも）"
+    label: "Kagura_Rei"
   },
   {
-    label: "Takajo_Kyoji",
+    detail: "SideM / Beit（ばいと）",
     description: "鷹城恭二 (たかじょうきょうじ)",
-    detail: "SideM / Beit（ばいと）"
+    label: "Takajo_Kyoji"
   },
   {
-    label: "Pierre",
+    detail: "SideM / Beit（ばいと）",
     description: "ピエール (ぴえーる)",
-    detail: "SideM / Beit（ばいと）"
+    label: "Pierre"
   },
   {
-    label: "Watanabe_Minori",
+    detail: "SideM / Beit（ばいと）",
     description: "渡辺みのり (わたなべみのり)",
-    detail: "SideM / Beit（ばいと）"
+    label: "Watanabe_Minori"
   },
   {
-    label: "Aoi_Yusuke",
+    detail: "SideM / W（だぶる）",
     description: "蒼井悠介 (あおいゆうすけ)",
-    detail: "SideM / W（だぶる）"
+    label: "Aoi_Yusuke"
   },
   {
-    label: "Aoi_Kyosuke",
+    detail: "SideM / W（だぶる）",
     description: "蒼井享介 (あおいきょうすけ)",
-    detail: "SideM / W（だぶる）"
+    label: "Aoi_Kyosuke"
   },
   {
-    label: "Kimura_Ryu",
+    detail: "SideM / FRAME（ふれーむ）",
     description: "木村龍 (きむらりゅう)",
-    detail: "SideM / FRAME（ふれーむ）"
+    label: "Kimura_Ryu"
   },
   {
-    label: "Akuno_Hideo",
+    detail: "SideM / FRAME（ふれーむ）",
     description: "握野英雄 (あくのひでお)",
-    detail: "SideM / FRAME（ふれーむ）"
+    label: "Akuno_Hideo"
   },
   {
-    label: "Shingen_Seiji",
+    detail: "SideM / FRAME（ふれーむ）",
     description: "信玄誠司 (しんげんせいじ)",
-    detail: "SideM / FRAME（ふれーむ）"
+    label: "Shingen_Seiji"
   },
   {
-    label: "Kiyosumi_Kuro",
+    detail: "SideM / 彩（さい）",
     description: "清澄九郎 (きよすみくろう)",
-    detail: "SideM / 彩（さい）"
+    label: "Kiyosumi_Kuro"
   },
   {
-    label: "Nekoyanagi_Kirio",
+    detail: "SideM / 彩（さい）",
     description: "猫柳キリオ (ねこやなぎきりお)",
-    detail: "SideM / 彩（さい）"
+    label: "Nekoyanagi_Kirio"
   },
   {
-    label: "Hanamura_Shoma",
+    detail: "SideM / 彩（さい）",
     description: "華村翔真 (はなむらしょうま)",
-    detail: "SideM / 彩（さい）"
+    label: "Hanamura_Shoma"
   },
   {
-    label: "Fuyumi_Jun",
+    detail: "SideM / High×Joker（はいじょーかー）",
     description: "冬美旬 (ふゆみじゅん)",
-    detail: "SideM / High×Joker（はいじょーかー）"
+    label: "Fuyumi_Jun"
   },
   {
-    label: "Akiyama_Hayato",
+    detail: "SideM / High×Joker（はいじょーかー）",
     description: "秋山隼人 (あきやまはやと)",
-    detail: "SideM / High×Joker（はいじょーかー）"
+    label: "Akiyama_Hayato"
   },
   {
-    label: "Iseya_Shiki",
+    detail: "SideM / High×Joker（はいじょーかー）",
     description: "伊瀬谷四季 (いせやしき)",
-    detail: "SideM / High×Joker（はいじょーかー）"
+    label: "Iseya_Shiki"
   },
   {
-    label: "Sakaki_Natsuki",
+    detail: "SideM / High×Joker（はいじょーかー）",
     description: "榊夏来 (さかきなつき)",
-    detail: "SideM / High×Joker（はいじょーかー）"
+    label: "Sakaki_Natsuki"
   },
   {
-    label: "Wakazato_Haruna",
+    detail: "SideM / High×Joker（はいじょーかー）",
     description: "若里春名 (わかざとはるな)",
-    detail: "SideM / High×Joker（はいじょーかー）"
+    label: "Wakazato_Haruna"
   },
   {
-    label: "Akai_Suzaku",
+    detail: "SideM / 神速一魂（しんそくいっこん）",
     description: "紅井朱雀 (あかいすざく)",
-    detail: "SideM / 神速一魂（しんそくいっこん）"
+    label: "Akai_Suzaku"
   },
   {
-    label: "Kurono_Genbu",
+    detail: "SideM / 神速一魂（しんそくいっこん）",
     description: "黒野玄武 (くろのげんぶ)",
-    detail: "SideM / 神速一魂（しんそくいっこん）"
+    label: "Kurono_Genbu"
   },
   {
-    label: "Uzuki_Makio",
+    detail: "SideM / Café Parade（かふぇぱれーど）",
     description: "卯月巻緒 (うづきまきお)",
-    detail: "SideM / Café Parade（かふぇぱれーど）"
+    label: "Uzuki_Makio"
   },
   {
-    label: "Kamiya_Yukihiro",
+    detail: "SideM / Café Parade（かふぇぱれーど）",
     description: "神谷幸広 (かみやゆきひろ)",
-    detail: "SideM / Café Parade（かふぇぱれーど）"
+    label: "Kamiya_Yukihiro"
   },
   {
-    label: "Asselin_BB_2",
+    detail: "SideM / Café Parade（かふぇぱれーど）",
     description: "アスラン=BBⅡ世 (あすらんべるぜびゅーとにせい)",
-    detail: "SideM / Café Parade（かふぇぱれーど）"
+    label: "Asselin_BB_2"
   },
   {
-    label: "Shinonome_Soichiro",
+    detail: "SideM / Café Parade（かふぇぱれーど）",
     description: "東雲荘一郎 (しののめそういちろう)",
-    detail: "SideM / Café Parade（かふぇぱれーど）"
+    label: "Shinonome_Soichiro"
   },
   {
-    label: "Mizushima_Saki",
+    detail: "SideM / Café Parade（かふぇぱれーど）",
     description: "水嶋咲 (みずしまさき)",
-    detail: "SideM / Café Parade（かふぇぱれーど）"
+    label: "Mizushima_Saki"
   },
   {
-    label: "Tachibana_Shiro",
+    detail: "SideM / もふもふえん",
     description: "橘志狼 (たちばなしろう)",
-    detail: "SideM / もふもふえん"
+    label: "Tachibana_Shiro"
   },
   {
-    label: "Okamura_Nao",
+    detail: "SideM / もふもふえん",
     description: "岡村直央 (おかむらなお)",
-    detail: "SideM / もふもふえん"
+    label: "Okamura_Nao"
   },
   {
-    label: "Himeno_Kanon",
+    detail: "SideM / もふもふえん",
     description: "姫野かのん (ひめのかのん)",
-    detail: "SideM / もふもふえん"
+    label: "Himeno_Kanon"
   },
   {
-    label: "Yamashita_Jiro",
+    detail: "SideM / S.E.M（せむ）",
     description: "山下次郎 (やましたじろう)",
-    detail: "SideM / S.E.M（せむ）"
+    label: "Yamashita_Jiro"
   },
   {
-    label: "Maita_Rui",
+    detail: "SideM / S.E.M（せむ）",
     description: "舞田類 (まいたるい)",
-    detail: "SideM / S.E.M（せむ）"
+    label: "Maita_Rui"
   },
   {
-    label: "Hazama_Michio",
+    detail: "SideM / S.E.M（せむ）",
     description: "硲道夫 (はざまみちお)",
-    detail: "SideM / S.E.M（せむ）"
+    label: "Hazama_Michio"
   },
   {
-    label: "Enjoji_Michiru",
+    detail: "SideM / THE 虎牙道（ざ　こがどう）",
     description: "円城寺道流 (えんじょうじみちる)",
-    detail: "SideM / THE 虎牙道（ざ　こがどう）"
+    label: "Enjoji_Michiru"
   },
   {
-    label: "Taiga_Takeru",
+    detail: "SideM / THE 虎牙道（ざ　こがどう）",
     description: "大河タケル (たいがたける)",
-    detail: "SideM / THE 虎牙道（ざ　こがどう）"
+    label: "Taiga_Takeru"
   },
   {
-    label: "Kizaki_Ren",
+    detail: "SideM / THE 虎牙道（ざ　こがどう）",
     description: "牙崎漣 (きざきれん)",
-    detail: "SideM / THE 虎牙道（ざ　こがどう）"
+    label: "Kizaki_Ren"
   },
   {
-    label: "Tsukumo_Kazuki",
+    detail: "SideM / F-LAGS（ふらっぐす）",
     description: "九十九一希 (つくもかずき)",
-    detail: "SideM / F-LAGS（ふらっぐす）"
+    label: "Tsukumo_Kazuki"
   },
   {
-    label: "Akizuki_Ryo_315",
+    detail: "SideM / F-LAGS（ふらっぐす）",
     description: "秋月涼 (あきづきりょう)",
-    detail: "SideM / F-LAGS（ふらっぐす）"
+    label: "Akizuki_Ryo_315"
   },
   {
-    label: "Kabuto_Daigo",
+    detail: "SideM / F-LAGS（ふらっぐす）",
     description: "兜大吾 (かぶとだいご)",
-    detail: "SideM / F-LAGS（ふらっぐす）"
+    label: "Kabuto_Daigo"
   },
   {
-    label: "Kuzunoha_Amehiko",
+    detail: "SideM / Legenders（れじぇんだーず）",
     description: "葛之葉雨彦 (くずのはあめひこ)",
-    detail: "SideM / Legenders（れじぇんだーず）"
+    label: "Kuzunoha_Amehiko"
   },
   {
-    label: "Kitamura_Sora",
+    detail: "SideM / Legenders（れじぇんだーず）",
     description: "北村想楽 (きたむらそら)",
-    detail: "SideM / Legenders（れじぇんだーず）"
+    label: "Kitamura_Sora"
   },
   {
-    label: "Koron_Chris",
+    detail: "SideM / Legenders（れじぇんだーず）",
     description: "古論クリス (ころんくりす)",
-    detail: "SideM / Legenders（れじぇんだーず）"
+    label: "Koron_Chris"
   },
   {
-    label: "Hanazono_Momohito",
+    detail: "SideM / C.FIRST（くらすふぁーすと）",
     description: "花園百々人 (はなぞのももひと)",
-    detail: "SideM / C.FIRST（くらすふぁーすと）"
+    label: "Hanazono_Momohito"
   },
   {
-    label: "Amamine_Shu",
+    detail: "SideM / C.FIRST（くらすふぁーすと）",
     description: "天峰秀 (あまみねしゅう)",
-    detail: "SideM / C.FIRST（くらすふぁーすと）"
+    label: "Amamine_Shu"
   },
   {
-    label: "Mayumi_Eishin",
+    detail: "SideM / C.FIRST（くらすふぁーすと）",
     description: "眉見鋭心 (まゆみえいしん)",
-    detail: "SideM / C.FIRST（くらすふぁーすと）"
+    label: "Mayumi_Eishin"
   },
   {
-    label: "Sakuragi_Mano",
+      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）",
+    detail:
     description: "櫻木真乃 (さくらぎまの)",
-    detail:
-      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）"
+    label: "Sakuragi_Mano"
   },
   {
-    label: "Kazano_Hiori",
+      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）",
+    detail:
     description: "風野灯織 (かざのひおり)",
-    detail:
-      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）"
+    label: "Kazano_Hiori"
   },
   {
-    label: "Hachimiya_Meguru",
+      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）",
+    detail:
     description: "八宮めぐる (はちみやめぐる)",
-    detail:
-      "シャイニーカラーズ / illumination STARS（いるみねーしょんすたーず）"
+    label: "Hachimiya_Meguru"
   },
   {
-    label: "Tsukioka_Kogane",
+    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）",
     description: "月岡恋鐘 (つきおかこがね)",
-    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+    label: "Tsukioka_Kogane"
   },
   {
-    label: "Tanaka_Mamimi",
+    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）",
     description: "田中摩美々 (たなかまみみ)",
-    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+    label: "Tanaka_Mamimi"
   },
   {
-    label: "Shirase_Sakuya",
+    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）",
     description: "白瀬咲耶 (しらせさくや)",
-    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+    label: "Shirase_Sakuya"
   },
   {
-    label: "Mitsumine_Yuika",
+    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）",
     description: "三峰結華 (みつみねゆいか)",
-    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+    label: "Mitsumine_Yuika"
   },
   {
-    label: "Yukoku_Kiriko",
+    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）",
     description: "幽谷霧子 (ゆうこくきりこ)",
-    detail: "シャイニーカラーズ / L’Antica（あんてぃーか）"
+    label: "Yukoku_Kiriko"
   },
   {
-    label: "Komiya_Kaho",
+    detail: "シャイニーカラーズ / 放課後クライマックスガールズ",
     description: "小宮果穂 (こみやかほ)",
-    detail: "シャイニーカラーズ / 放課後クライマックスガールズ"
+    label: "Komiya_Kaho"
   },
   {
-    label: "Sonoda_Chiyoko",
+    detail: "シャイニーカラーズ / 放課後クライマックスガールズ",
     description: "園田智代子 (そのだちよこ)",
-    detail: "シャイニーカラーズ / 放課後クライマックスガールズ"
+    label: "Sonoda_Chiyoko"
   },
   {
-    label: "Saijo_Juri",
+    detail: "シャイニーカラーズ / 放課後クライマックスガールズ",
     description: "西城樹里 (さいじょうじゅり)",
-    detail: "シャイニーカラーズ / 放課後クライマックスガールズ"
+    label: "Saijo_Juri"
   },
   {
-    label: "Morino_Rinze",
+    detail: "シャイニーカラーズ / 放課後クライマックスガールズ",
     description: "杜野凛世 (もりのりんぜ)",
-    detail: "シャイニーカラーズ / 放課後クライマックスガールズ"
+    label: "Morino_Rinze"
   },
   {
-    label: "Arisugawa_Natsuha",
+    detail: "シャイニーカラーズ / 放課後クライマックスガールズ",
     description: "有栖川夏葉 (ありすがわなつは)",
-    detail: "シャイニーカラーズ / 放課後クライマックスガールズ"
+    label: "Arisugawa_Natsuha"
   },
   {
-    label: "Osaki_Amana",
+    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）",
     description: "大崎甘奈 (おおさきあまな)",
-    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）"
+    label: "Osaki_Amana"
   },
   {
-    label: "Osaki_Tenka",
+    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）",
     description: "大崎甜花 (おおさきてんか)",
-    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）"
+    label: "Osaki_Tenka"
   },
   {
-    label: "Kuwayama_Chiyuki",
+    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）",
     description: "桑山千雪 (くわやまちゆき)",
-    detail: "シャイニーカラーズ / ALSTROEMERIA（あるすとろめりあ）"
+    label: "Kuwayama_Chiyuki"
   },
   {
-    label: "Serizawa_Asahi",
+    detail: "シャイニーカラーズ / Straylight（すとれいらいと）",
     description: "芹沢あさひ (せりざわあさひ)",
-    detail: "シャイニーカラーズ / Straylight（すとれいらいと）"
+    label: "Serizawa_Asahi"
   },
   {
-    label: "Mayuzumi_Fuyuko",
+    detail: "シャイニーカラーズ / Straylight（すとれいらいと）",
     description: "黛冬優子 (まゆずみふゆこ)",
-    detail: "シャイニーカラーズ / Straylight（すとれいらいと）"
+    label: "Mayuzumi_Fuyuko"
   },
   {
-    label: "Izumi_Mei",
+    detail: "シャイニーカラーズ / Straylight（すとれいらいと）",
     description: "和泉愛依 (いずみめい)",
-    detail: "シャイニーカラーズ / Straylight（すとれいらいと）"
+    label: "Izumi_Mei"
   },
   {
-    label: "Asakura_Toru",
+    detail: "シャイニーカラーズ / noctchill（のくちる）",
     description: "浅倉透 (あさくらとおる)",
-    detail: "シャイニーカラーズ / noctchill（のくちる）"
+    label: "Asakura_Toru"
   },
   {
-    label: "Higuchi_Madoka",
+    detail: "シャイニーカラーズ / noctchill（のくちる）",
     description: "樋口円香 (ひぐちまどか)",
-    detail: "シャイニーカラーズ / noctchill（のくちる）"
+    label: "Higuchi_Madoka"
   },
   {
-    label: "Fukumaru_Koito",
+    detail: "シャイニーカラーズ / noctchill（のくちる）",
     description: "福丸小糸 (ふくまるこいと)",
-    detail: "シャイニーカラーズ / noctchill（のくちる）"
+    label: "Fukumaru_Koito"
   },
   {
-    label: "Ichikawa_Hinana",
+    detail: "シャイニーカラーズ / noctchill（のくちる）",
     description: "市川雛菜 (いちかわひなな)",
-    detail: "シャイニーカラーズ / noctchill（のくちる）"
+    label: "Ichikawa_Hinana"
   },
   {
-    label: "Nanakusa_Nichika",
+    detail: "シャイニーカラーズ / SHHis（しーず）",
     description: "七草にちか (ななくさにちか)",
-    detail: "シャイニーカラーズ / SHHis（しーず）"
+    label: "Nanakusa_Nichika"
   },
   {
-    label: "Aketa_Mikoto",
+    detail: "シャイニーカラーズ / SHHis（しーず）",
     description: "緋田美琴 (あけたみこと)",
-    detail: "シャイニーカラーズ / SHHis（しーず）"
+    label: "Aketa_Mikoto"
   },
   {
-    label: "Suzuki_Hana",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）",
     description: "鈴木羽那 (すずきはな)",
-    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+    label: "Suzuki_Hana"
   },
   {
-    label: "Ikaruga_Luca",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）",
     description: "斑鳩ルカ (いかるがるか)",
-    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+    label: "Ikaruga_Luca"
   },
   {
-    label: "Ikuta_Haruki",
+    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）",
     description: "郁田はるき (いくたはるき)",
-    detail: "シャイニーカラーズ / CoMETIK（こめてぃっく）"
+    label: "Ikuta_Haruki"
   },
   {
-    label: "Asahina_Rin",
+    detail: "その他",
     description: "朝比奈りん (あさひなりん)",
-    detail: "その他"
+    label: "Asahina_Rin"
   },
   {
-    label: "Aya",
+    detail: "その他",
     description: "亜夜 (あや)",
-    detail: "その他"
+    label: "Aya"
   },
   {
-    label: "Okuzora_Kohaku",
+    detail: "その他",
     description: "奥空心白 (おくぞらこはく)",
-    detail: "その他"
+    label: "Okuzora_Kohaku"
   },
   {
-    label: "Sanjo_Tomomi",
+    detail: "その他",
     description: "三条ともみ (さんじょうともみ)",
-    detail: "その他"
+    label: "Sanjo_Tomomi"
   },
   {
-    label: "Shika",
+    detail: "その他",
     description: "詩花 (しいか)",
-    detail: "その他"
+    label: "Shika"
   },
   {
-    label: "Tsubame",
+    detail: "その他",
     description: "つばめ (つばめ)",
-    detail: "その他"
+    label: "Tsubame"
   },
   {
-    label: "Togoji_Reika",
+    detail: "その他",
     description: "東豪寺麗華 (とうごうじれいか)",
-    detail: "その他"
+    label: "Togoji_Reika"
   },
   {
-    label: "Nozomi",
+    detail: "その他",
     description: "のぞみ (のぞみ)",
-    detail: "その他"
+    label: "Nozomi"
   },
   {
-    label: "Hikari",
+    detail: "その他",
     description: "ひかり (ひかり)",
-    detail: "その他"
+    label: "Hikari"
   },
   {
-    label: "Leon",
+    detail: "その他",
     description: "玲音 (れおん)",
-    detail: "その他"
+    label: "Leon"
   }
 ];
