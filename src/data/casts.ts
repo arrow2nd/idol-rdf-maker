@@ -587,8 +587,63 @@ export const castQuickPickItems: QuickPickItem[] = [
     detail: "ディアリースターズ"
   },
   {
+    label: "七瀬つむぎ",
+    description: "有村麻央 (ありむらまお)",
+    detail: "Gakuen"
+  },
+  {
+    label: "花岩香奈",
+    description: "葛城リーリヤ (かつらぎりーりや)",
+    detail: "Gakuen"
+  },
+  {
+    label: "伊藤舞音",
+    description: "倉本千奈 (くらもとちな)",
+    detail: "Gakuen"
+  },
+  {
+    label: "湊みや",
+    description: "紫雲清夏 (しうんすみか)",
+    detail: "Gakuen"
+  },
+  {
+    label: "川村玲奈",
+    description: "篠澤広 (しのさわひろ)",
+    detail: "Gakuen"
+  },
+  {
+    label: "陽高真白",
+    description: "十王星南 (じゅうおうせな)",
+    detail: "Gakuen"
+  },
+  {
+    label: "小鹿なお",
+    description: "月村手毬 (つきむらてまり)",
+    detail: "Gakuen"
+  },
+  {
+    label: "春咲暖",
+    description: "秦谷美鈴 (はたやみすず)",
+    detail: "Gakuen"
+  },
+  {
+    label: "松田彩音",
+    description: "花海佑芽 (はなみうめ)",
+    detail: "Gakuen"
+  },
+  {
     label: "長月あおい",
     description: "花海咲季 (はなみさき)",
+    detail: "Gakuen"
+  },
+  {
+    label: "薄井友里",
+    description: "姫崎莉波 (ひめさきりなみ)",
+    detail: "Gakuen"
+  },
+  {
+    label: "飯田ヒカル",
+    description: "藤田ことね (ふじたことね)",
     detail: "Gakuen"
   },
   {
